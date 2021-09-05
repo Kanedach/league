@@ -1,0 +1,27 @@
+<div class="ui two column centered grid">
+  <div class="column">
+    <div class="ui message" style="margin-top: 50px">
+      <div class="header">
+        League of Legends Dashboard
+      </div>
+      <p>For your own use.</p>
+    </div>
+  </div>
+  <div class="four column centered row">
+    <div class="column">
+      <form [formGroup]="summonersForm" (ngSubmit)="onSubmit()">
+        <div class="ui input focus">
+          <div class="ui right labeled input">
+            <input type="text" placeholder="Summoners name..." formControlName="name">
+            <div class="ui basic label">
+              EUW
+            </div>
+          </div>
+        </div>
+        <button class="ui primary button" style="margin-left: 20px" type="submit" [disabled]="!summonersForm.valid"
+                (submit)="onSubmit()">Search
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
