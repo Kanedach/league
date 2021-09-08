@@ -1,11 +1,11 @@
 import {Action, createReducer, on} from "@ngrx/store";
-import {ChampionMastery, LeagueEntries, MatchList, Summoner} from "@league/api-interfaces";
+import {ChampionMastery, DDChampion, LeagueEntries, MatchList, Summoner} from "@league/api-interfaces";
 import * as riotActions from '../actions/riot.actions'
 
 export interface IRiot {
   summoner: {
     isLoading: boolean;
-    summoner: Summoner | null;
+    summoner: Summoner;
   },
   championMasteries: {
     isLoading: boolean;
@@ -17,14 +17,23 @@ export interface IRiot {
   },
   matchList: {
     isLoading: boolean;
-    matchList: MatchList[]
-  }
+    matchList: MatchList
+  },
+  champions: DDChampion | null
 }
 
 const initRiot: IRiot = {
   summoner: {
     isLoading: false,
-    summoner: null
+    summoner: {
+      id: '',
+      accountId: '',
+      puuid: '',
+      name: '',
+      profileIconId: 0,
+      revisionDate: 0,
+      summonerLevel: 0,
+    }
   },
   championMasteries: {
     isLoading: false,
@@ -36,8 +45,14 @@ const initRiot: IRiot = {
   },
   matchList: {
     isLoading: false,
-    matchList: []
-  }
+    matchList: {
+      matches: [],
+      endIndex: 0,
+      startIndex: 0,
+      totalGames: 0
+    }
+  },
+  champions: null
 }
 
 const reducer = createReducer(
@@ -102,6 +117,10 @@ const reducer = createReducer(
       matchList,
       isLoading: false
     }
+  })),
+  on(riotActions.fetchedChampions, (state, {ddChampions}) => ({
+    ...state,
+    champions: ddChampions
   }))
 )
 

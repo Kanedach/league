@@ -1,16 +1,18 @@
 import {Injectable} from "@angular/core";
 import {IRiot} from "../reducers/riot.reducer";
-import {Store} from "@ngrx/store";
+import {createAction, Store} from "@ngrx/store";
 import {RiotService} from "../../riot.service";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {map, mergeMap, switchMap} from "rxjs/operators";
+import {map, mergeMap, switchMap, tap} from "rxjs/operators";
 import * as riotActions from '../actions/riot.actions'
+import {DDragonService} from "../../ddragon.service";
 
 @Injectable()
 export class RiotEffects {
   constructor(private actions$: Actions,
               private riotService: RiotService,
-              private store$: Store<IRiot>) {
+              private store$: Store<IRiot>,
+              private dDragonService: DDragonService) {
   }
 
   public fetchSummoner = createEffect(() => {
@@ -26,9 +28,12 @@ export class RiotEffects {
           ]
         ))
       ))
-  })
+  });
 
-  public fetchChampionMasteries = createEffect(() => {
+
+/**
+
+   public fetchChampionMasteries = createEffect(() => {
     return this.actions$.pipe(
       ofType(riotActions.fetchChampionMasteries),
       mergeMap((action) => this.riotService.getChampionMasteries(action.summonersId).pipe(
@@ -37,9 +42,9 @@ export class RiotEffects {
         }))
       ))
     )
-  })
+  });
 
-  public fetchLeague = createEffect(() => {
+   public fetchLeague = createEffect(() => {
     return this.actions$.pipe(
       ofType(riotActions.fetchLeague),
       mergeMap((action) => this.riotService.getLeague(action.summonersId).pipe(
@@ -48,7 +53,9 @@ export class RiotEffects {
         }))
       ))
     )
-  })
+  });
+
+ **/
 
   public fetchMatchList = createEffect(() => {
     return this.actions$.pipe(
@@ -59,6 +66,17 @@ export class RiotEffects {
         }))
       ))
     )
-  })
+  });
+
+  public fetchDDChampions = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(riotActions.fetchChampions),
+      mergeMap((action) => this.dDragonService.getDDragonChampion().pipe(
+        map((ddChampions) => riotActions.fetchedChampions({
+          ddChampions
+        }))
+      ))
+    )
+  });
 
 }

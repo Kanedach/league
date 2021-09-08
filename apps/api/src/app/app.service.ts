@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import {Injectable} from '@nestjs/common';
 import {ChampionMastery, LeagueEntries, MatchInformation, MatchList, Message, Summoner} from '@league/api-interfaces';
 import {Observable} from "rxjs";
 import {environment} from "../environments/environment";
 import {HttpService} from "@nestjs/axios";
 import {AxiosResponse} from "axios";
-import {map, tap} from "rxjs/operators";
+import {tap} from "rxjs/operators";
 
 @Injectable()
 export class AppService {
@@ -20,8 +20,7 @@ export class AppService {
     return this.httpService.get<Summoner>(environment.riot_api_euw_url + '/lol/summoner/v4/summoners/by-name/' + summonerName.toLowerCase(), {headers: {
         'X-Riot-Token': environment.riot_api_token
       }}
-    ).pipe(
-      tap(res => console.log(res.config.url)), tap(res => console.log(res.status)));
+    )
   }
 
   getChampionMastery(summonerId: string):  Observable<AxiosResponse<ChampionMastery[]>>{
@@ -51,5 +50,4 @@ export class AppService {
       }}
     );
   }
-
 }

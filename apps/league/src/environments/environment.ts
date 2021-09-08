@@ -2,9 +2,14 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {Provider} from "@angular/core";
+
 export const environment = {
   production: false,
 };
+
+export const conditionalModules = []
+export const conditionalProviders: Provider[] = [];
 
 /*
  * For easier debugging in development mode, you can import the following file

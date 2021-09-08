@@ -23,8 +23,8 @@ export class RiotService {
     return this.http.get<LeagueEntries[]>('/api/league/' + summonersId)
   }
 
-  public getMatchList(accountId: string): Observable<MatchList[]> {
-    return this.http.get<MatchList[]>('/api/match-list/' + accountId)
+  public getMatchList(accountId: string): Observable<MatchList> {
+    return this.http.get<MatchList>('/api/match-list/' + accountId)
   }
 
   public getMatchHistory(matchId: string): Observable<MatchInformation> {

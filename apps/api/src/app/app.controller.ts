@@ -1,8 +1,8 @@
-import {Controller, Get, Param, HttpCode} from '@nestjs/common';
-import {ChampionMastery, LeagueEntries, MatchInformation, MatchList, Message, Summoner} from '@league/api-interfaces';
+import {Controller, Get, Param, Res} from '@nestjs/common';
+import {ChampionMastery, LeagueEntries, MatchInformation, MatchList, Summoner} from '@league/api-interfaces';
 import {AppService} from './app.service';
 import {Observable} from "rxjs";
-import {map, tap} from "rxjs/operators";
+import {map} from "rxjs/operators";
 
 @Controller()
 export class AppController {
@@ -12,7 +12,7 @@ export class AppController {
   @Get('summoner/:name')
   getSummonerName(@Param('name') name: string): Observable<Summoner> {
     return this.appService.getSummoner(name).pipe(
-      map((res) => (res.data))
+      map( response => response.data)
     )
   }
 
@@ -43,5 +43,4 @@ export class AppController {
       map((res) => (res.data))
     )
   }
-
 }

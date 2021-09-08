@@ -82,7 +82,8 @@
             "inlineStyleLanguage": "scss",
             "assets": ["apps/league/src/favicon.ico", "apps/league/src/assets"],
             "styles": ["apps/league/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": ["lodash"]
           },
           "configurations": {
             "production": {
@@ -113,6 +114,20 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "mocked": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/league/src/environments/environment.ts",
+                  "with": "apps/league/src/environments/environment.mock.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -125,6 +140,9 @@
             },
             "development": {
               "browserTarget": "league:build:development"
+            },
+            "mocked": {
+              "browserTarget": "league:build:mocked"
             }
           },
           "defaultConfiguration": "development",

@@ -1,0 +1,19 @@
+<ng-container *ngIf="matchs$ !== null">
+  {{(matchs$|async).matches.length}}
+  <div class="ui relaxed divided list">
+    <div class="item" *ngFor="let match of (matchs$|async).matches">
+      <i class="large github middle aligned icon"></i>
+      <div class="content">
+        <a class="header">{{match.timestamp.toString() | date: 'd. MMM y HH:mm'}}</a>
+        <div class="description">
+          {{match.gameId}}
+          {{match.queue}}
+          {{match.champion}}
+          {{match.role}}
+          {{match.lane}}
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+

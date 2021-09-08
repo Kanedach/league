@@ -13,9 +13,14 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {RiotEffects} from "./store/effects/riot.effects";
 import {RiotFacadeService} from "./store/riot.facade.service";
 import {riotReducer} from "./store/reducers/riot.reducer";
+import { SummonerComponent } from './riot/summoner/summoner.component';
+import { ChampionMasteriesComponent } from './riot/champion-masteries/champion-masteries.component';
+import { LeagueComponent } from './riot/league/league.component';
+import { MatchListComponent } from './riot/match-list/match-list.component';
+import {conditionalModules, conditionalProviders} from "../environments/environment";
 
 @NgModule({
-  declarations: [AppComponent, SummonerSearchComponent],
+  declarations: [AppComponent, SummonerSearchComponent, SummonerComponent, ChampionMasteriesComponent, LeagueComponent, MatchListComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -26,10 +31,12 @@ import {riotReducer} from "./store/reducers/riot.reducer";
     logOnly: environment.production
   }),
     EffectsModule.forRoot([RiotEffects]),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ...conditionalModules
   ],
   providers: [RiotFacadeService],
   bootstrap: [AppComponent],
+  ...conditionalProviders
 })
 export class AppModule {
 }

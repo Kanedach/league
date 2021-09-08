@@ -25,6 +25,13 @@ export interface ChampionMastery {
 }
 
 export interface MatchList {
+  matches: Matches[];
+  startIndex: number;
+  endIndex: number;
+  totalGames: number;
+}
+
+export interface Matches {
   gameId: bigint;
   role: string;
   season: string;

@@ -1,0 +1,32 @@
+[
+  {
+    "leagueId": "6eebde2d-2455-4f59-8561-c11bb97a30c2",
+    "queueType": "RANKED_SOLO_5x5",
+    "tier": "SILVER",
+    "rank": "III",
+    "summonerId": "8WMyzLo7fF0hb2tnjcBnfXhqkGOKu7coBWF5YDAdDlOUJwA",
+    "summonerName": "Kanedach",
+    "leaguePoints": 92,
+    "wins": 47,
+    "losses": 55,
+    "veteran": false,
+    "inactive": false,
+    "freshBlood": false,
+    "hotStreak": false
+  },
+  {
+    "leagueId": "91f85dd8-9393-4f36-ac60-c1ad63945df2",
+    "queueType": "RANKED_FLEX_SR",
+    "tier": "SILVER",
+    "rank": "II",
+    "summonerId": "8WMyzLo7fF0hb2tnjcBnfXhqkGOKu7coBWF5YDAdDlOUJwA",
+    "summonerName": "Kanedach",
+    "leaguePoints": 39,
+    "wins": 90,
+    "losses": 93,
+    "veteran": false,
+    "inactive": false,
+    "freshBlood": false,
+    "hotStreak": false
+  }
+]
