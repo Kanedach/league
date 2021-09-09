@@ -1,7 +1,29 @@
-<div *ngFor="let cm of championMasteries$ | async">
-  {{cm.championLevel}}
-  <br>
-  {{cm.championId}}
-  <br>
-  {{cm.chestGranted}}
-</div>
+<ng-container *ngIf="(championMasteries$|async)?.length > 0">
+  <h2 class="ui header">
+    <i class="id badge outline icon"></i>
+    <div class="content">
+      Champion Masteries
+    </div>
+  </h2>
+  <div class="ui three column grid">
+    <div class="column" *ngFor="let o of (championMasteries$|async | slice:0:3); let i = index">
+      <div class="ui fluid card">
+        <div class="content">
+          <div class="center aligned header">{{o.champion.name}}</div>
+          <div class="center aligned description">
+            <p>{{o.champion.title}}</p>
+            <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{o.champion.name}}_0.jpg" style="width: 210px">
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="center aligned author">
+            <p>Level: {{o.championLevel}}</p>
+            <p>Points: {{o.championPoints | number}}</p>
+            <p>Last Played: {{o.lastPlayTime.toString() | date: 'dd MMM yy HH:mm' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+

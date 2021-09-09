@@ -31,9 +31,7 @@ export class RiotEffects {
   });
 
 
-/**
-
-   public fetchChampionMasteries = createEffect(() => {
+  public fetchChampionMasteries = createEffect(() => {
     return this.actions$.pipe(
       ofType(riotActions.fetchChampionMasteries),
       mergeMap((action) => this.riotService.getChampionMasteries(action.summonersId).pipe(
@@ -44,7 +42,7 @@ export class RiotEffects {
     )
   });
 
-   public fetchLeague = createEffect(() => {
+  public fetchLeague = createEffect(() => {
     return this.actions$.pipe(
       ofType(riotActions.fetchLeague),
       mergeMap((action) => this.riotService.getLeague(action.summonersId).pipe(
@@ -55,7 +53,6 @@ export class RiotEffects {
     )
   });
 
- **/
 
   public fetchMatchList = createEffect(() => {
     return this.actions$.pipe(

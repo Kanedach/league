@@ -3,8 +3,10 @@ import {IRiot} from "./reducers/riot.reducer";
 import {Store} from "@ngrx/store";
 import * as riotActions from './actions/riot.actions'
 import * as riotSelectors from './selectors/riot.selectors'
-import {Champion, ChampionMastery, DDChampion, LeagueEntries, MatchList, Summoner} from "@league/api-interfaces";
+import {Champion, ChampionMastery, LeagueEntries, MatchList, Summoner} from "@league/api-interfaces";
 import {Observable} from "rxjs";
+import {filterNull} from "../filter-null";
+import {map} from "rxjs/operators";
 
 @Injectable()
 export class RiotFacadeService {
@@ -16,8 +18,8 @@ export class RiotFacadeService {
       fetchSummonerName: (summonerName: string): void => this.store$.dispatch(riotActions.fetchSummonerName({summonerName})),
       getSummonr: (): Observable<Summoner> => this.store$.select(riotSelectors.getSummonerName),
       getChampionMasteries: (): Observable<ChampionMastery[]> => this.store$.select(riotSelectors.getChampionMasteries),
-      getLeague: (): Observable<LeagueEntries[]> => this.store$.select(riotSelectors.getLeague),
-      getMatchList: (): Observable<MatchList> => this.store$.select(riotSelectors.getMatchList)
+      getLeague: ((): Observable<LeagueEntries[]> => this.store$.select(riotSelectors.getLeague).pipe(filterNull())),
+      getMatchList: ((): Observable<MatchList> => this.store$.select(riotSelectors.getMatchList).pipe(filterNull()))
     }
   }
 

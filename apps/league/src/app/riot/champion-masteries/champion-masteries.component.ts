@@ -10,12 +10,13 @@ import {RiotFacadeService} from "../../store/riot.facade.service";
 })
 export class ChampionMasteriesComponent implements OnInit {
 
-  public championMasteries$: Observable<ChampionMastery[]> | undefined;
+  public championMasteries$: Observable<ChampionMastery[]>;
 
-  constructor(private riotFacadeService: RiotFacadeService) { }
+  constructor(private riotFacadeService: RiotFacadeService) {
+    this.championMasteries$ = this.riotFacadeService.riotUi.getChampionMasteries();
+  }
 
   ngOnInit(): void {
-    this.championMasteries$ = this.riotFacadeService.riotUi.getChampionMasteries();
     this.riotFacadeService.dDragonUi.fetchChampions();
   }
 

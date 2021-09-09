@@ -10,12 +10,15 @@ import {MatchList} from "@league/api-interfaces";
 })
 export class MatchListComponent implements OnInit {
 
-  public matchs$: Observable<MatchList> | undefined | null
+  public matchs$: Observable<MatchList>
 
-  constructor(private riotFacadeService: RiotFacadeService) { }
+  constructor(
+    private riotFacadeService: RiotFacadeService) {
+    this.matchs$ = this.riotFacadeService.riotUi.getMatchList()
+  }
 
   ngOnInit(): void {
-    this.matchs$ = this.riotFacadeService.riotUi.getMatchList()
+
   }
 
 }

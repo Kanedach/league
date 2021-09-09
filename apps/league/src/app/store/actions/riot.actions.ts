@@ -13,12 +13,12 @@ export const fetchSummonerName = createAction('[Riot] Fetch summoner information
 export const fetchedSummoner = createAction('[Riot] Fetched summoner',
   props<{ summoner: Summoner }>());
 
-export const fetchChampionMasteries = createAction('[Riot] Fetched Champion Masteries',
+export const fetchChampionMasteries = createAction('[Riot] Fetch Champion Masteries',
   props<{ summonersId: string }>())
 export const fetchedChampionMasteries = createAction('[Riot] Fetched Champion Masteries',
   props<{ championMastery: ChampionMastery[] }>());
 
-export const fetchLeague = createAction('[Riot] Fetched League',
+export const fetchLeague = createAction('[Riot] Fetch League',
   props<{ summonersId: string }>())
 export const fetchedLeague = createAction('[Riot] Fetched League',
   props<{ leagueEntry: LeagueEntries[] }>());

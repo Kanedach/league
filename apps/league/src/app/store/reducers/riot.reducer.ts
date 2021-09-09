@@ -17,7 +17,7 @@ export interface IRiot {
   },
   matchList: {
     isLoading: boolean;
-    matchList: MatchList
+    matchList: MatchList | null
   },
   champions: DDChampion | null
 }
@@ -45,12 +45,7 @@ const initRiot: IRiot = {
   },
   matchList: {
     isLoading: false,
-    matchList: {
-      matches: [],
-      endIndex: 0,
-      startIndex: 0,
-      totalGames: 0
-    }
+    matchList: null
   },
   champions: null
 }

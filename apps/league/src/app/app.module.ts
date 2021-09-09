@@ -18,9 +18,12 @@ import { ChampionMasteriesComponent } from './riot/champion-masteries/champion-m
 import { LeagueComponent } from './riot/league/league.component';
 import { MatchListComponent } from './riot/match-list/match-list.component';
 import {conditionalModules, conditionalProviders} from "../environments/environment";
+import { CardComponent } from './riot/league/card/card.component';
+import { RiftPipe } from './riot/league/rift.pipe';
+import { QueuePipe } from './riot/match-list/queue.pipe';
 
 @NgModule({
-  declarations: [AppComponent, SummonerSearchComponent, SummonerComponent, ChampionMasteriesComponent, LeagueComponent, MatchListComponent],
+  declarations: [AppComponent, SummonerSearchComponent, SummonerComponent, ChampionMasteriesComponent, LeagueComponent, MatchListComponent, CardComponent, RiftPipe, QueuePipe],
   imports: [
     BrowserModule,
     HttpClientModule,

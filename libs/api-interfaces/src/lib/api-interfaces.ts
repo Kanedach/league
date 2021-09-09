@@ -1,3 +1,5 @@
+import {Champion} from "./ddragon-interface";
+
 export interface Message {
   message: string;
 }
@@ -21,14 +23,15 @@ export interface ChampionMastery {
   summonerId: string;
   championPoints: number;
   championPointsSinceLastLevel: bigint;
-  tokensEarned: number
+  tokensEarned: number;
+  champion?: Champion | null |undefined;
 }
 
 export interface MatchList {
   matches: Matches[];
-  startIndex: number;
-  endIndex: number;
-  totalGames: number;
+  startIndex: number | null;
+  endIndex: number | null;
+  totalGames: number | null;
 }
 
 export interface Matches {
@@ -238,25 +241,25 @@ export interface MasteryDto {
 }
 
 export interface LeagueEntries {
-  leagueId?: string;
-  summonerId?: string;
-  summonerName?: string;
-  queueType?: string;
-  tier?: string;
-  rank?: string;
-  leaguePoints?: number;
-  wins?: string;
-  losses?: string;
-  hotStreak?: boolean;
-  veteran?:boolean;
-  freshBlood?: boolean;
-  inactive?: boolean;
-  miniSeries?: MiniSeriesDTO[];
+  leagueId?: string | null;
+  summonerId?: string  | null;
+  summonerName: string  | null;
+  queueType?: string  | null;
+  tier?: string  | null;
+  rank?: string  | null;
+  leaguePoints?: number  | null;
+  wins?: string  | null;
+  losses?: string  | null;
+  hotStreak?: boolean  | null;
+  veteran?:boolean  | null;
+  freshBlood?: boolean  | null;
+  inactive?: boolean  | null;
+  miniSeries?: MiniSeriesDTO[] | [];
 }
 
 export interface MiniSeriesDTO {
-  losses: number;
-  progress: string;
-  target: number;
-  wins: number
+  losses: number  | null;
+  progress: string  | null;
+  target: number  | null;
+  wins: number  | null
 }

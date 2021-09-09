@@ -11,7 +11,7 @@ Run Dev Nest App `nx serve api`.
 
 ## Start Mock
 
-Run `npm run start-mock`.
+Run `npm run start-dev`.
 
 ## Quick NX Start & Documentation
 
