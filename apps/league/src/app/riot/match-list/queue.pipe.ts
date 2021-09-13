@@ -12,6 +12,7 @@ export interface Queues {
 })
 export class QueuePipe implements PipeTransform {
 
+
   transform(queueId: number): string {
     return this.findQueue(queueId);
   }

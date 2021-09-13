@@ -1,16 +1,41 @@
 <ng-container *ngIf="(matchs$|async) !== null">
-  <h2 class="ui header">
+  <h4 class="ui horizontal divider header" style="margin: 20PX 0px 20px 0px">
     <i class="bookmark outline icon"></i>
-    <div class="content">
-      Match List
-    </div>
-  </h2>
+    Champion Masteries
+  </h4>
+  <button class="ui primary basic button" [attr.cy-test-data]="'matchListButton'" (click)="history()" style="margin: 0PX 0px 20px 0px">List</button>
   <div class="ui celled list">
-    <div class="item" *ngFor="let match of (matchs$|async).matches">
-      <div class="content">
-        <div class="header">{{match.queue |queue}}</div>
-        {{match.timestamp.toString() | date: 'dd. MM. YY - HH:MM'}}
-      </div>
-    </div>
+    <ng-container *ngFor="let match of (matchs$|async).matches">
+      <ng-container *ngIf="match.matchInformation !== undefined">
+        <div class="item">
+          <div class="content">
+            <div class="ui stackable four column grid">
+              <div class="column">
+                <div class="header" [attr.cy-test-data]="'matchListQueue'">{{match.queueInformation.queueMap}}<br>{{match.queueInformation.queueDescription}}
+                </div>
+                {{match.timestamp.toString() | date: 'dd. MM. YY - HH:MM'}}
+              </div>
+              <div class="column">
+                <div class="ui horizontal list">
+                  <div class="item" *ngFor="let participants of match.matchInformation.participants |slice: 0: 5; index as i">
+                    <img class="ui image"
+                         src="http://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/Aatrox.png" width="45px">
+                  </div>
+                </div>
+                <br>
+                <div class="ui horizontal list">
+                  <div class="item" *ngFor="let participants of match.matchInformation.participants |slice: 5: 10; index as i">
+                    <img class="ui image"
+                         src="http://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/Aatrox.png" width="45px">
+                  </div>
+                </div>
+              </div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
   </div>
 </ng-container>

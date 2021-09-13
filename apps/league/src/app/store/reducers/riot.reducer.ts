@@ -1,6 +1,7 @@
 import {Action, createReducer, on} from "@ngrx/store";
 import {ChampionMastery, DDChampion, LeagueEntries, MatchList, Summoner} from "@league/api-interfaces";
 import * as riotActions from '../actions/riot.actions'
+import {AddMatchToMatchList} from "../../riot/lib/add-match-to-match-list";
 
 export interface IRiot {
   summoner: {
@@ -49,6 +50,8 @@ const initRiot: IRiot = {
   },
   champions: null
 }
+
+const addMatchToList = new AddMatchToMatchList();
 
 const reducer = createReducer(
   initRiot,
@@ -116,6 +119,18 @@ const reducer = createReducer(
   on(riotActions.fetchedChampions, (state, {ddChampions}) => ({
     ...state,
     champions: ddChampions
+  })),
+  on(riotActions.fetchedGame, (state, {matchInformation}) => ({
+    ...state,
+    matchList: {
+      ...state.matchList,
+      // @ts-ignore
+      matchList: {
+        ...state.matchList.matchList,
+        // @ts-ignore
+        matches: addMatchToList.addMatchToMatchList(state.matchList.matchList.matches, matchInformation)
+      }
+    }
   }))
 )
 

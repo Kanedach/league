@@ -21,4 +21,8 @@ export class MatchListComponent implements OnInit {
 
   }
 
+  history(): void {
+    this.riotFacadeService.riotUi.getMatchHistory();
+  }
+
 }

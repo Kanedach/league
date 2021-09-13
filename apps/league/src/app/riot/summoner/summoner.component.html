@@ -1,11 +1,11 @@
-<div class="ui two column centered grid" *ngIf="(summonerName$|async).name !== ''">
+<ng-container *ngIf="(summonerName$|async).name !== ''">
   <div class="column">
     <h2 class="ui header">
       <img src="http://ddragon.leagueoflegends.com/cdn/11.18.1/img/profileicon/{{(summonerName$|async)?.profileIconId}}.png" class="ui circular image">
-      <div class="content">
+      <div class="content" cy-test-data="summonerName">
         {{(summonerName$ | async)?.name}}
         <div class="sub header">Level: {{(summonerName$ | async)?.summonerLevel}}</div>
       </div>
     </h2>
   </div>
-</div>
+</ng-container>

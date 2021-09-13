@@ -11,7 +11,15 @@ Run Dev Nest App `nx serve api`.
 
 ## Start Mock
 
-Run `npm run start-dev`.
+Run `npm run start-dev` or `nx run league:serve:mocked`.
+
+## Test
+
+### Run Jest
+Run `nx test league`
+
+### Run Cypress
+Run `npx nx e2e league-e2` or `npx nx e2e league-e2 --watch`
 
 ## Quick NX Start & Documentation
 

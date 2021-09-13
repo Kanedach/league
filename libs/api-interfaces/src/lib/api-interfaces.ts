@@ -35,25 +35,48 @@ export interface MatchList {
 }
 
 export interface Matches {
-  gameId: bigint;
+  gameId: number;
   role: string;
-  season: string;
+  season: number;
   platformId: string;
   champion: number;
   queue: number;
+  queueInformation?: QueueInformation;
   lane: string;
-  timestamp: bigint;
+  timestamp: number;
+  matchInformation?: MatchInformation;
+}
+
+export interface QueueInformation {
+  queueMap?: any;
+  queueDescription?: any
 }
 
 export interface MatchInformation {
-  gameId: bigint;
+  gameId: number;
+  queueId: number;
+  gameType: string;
+  gameDuration: number;
+  platformId: string;
+  gameCreation: number;
+  seasonId: number;
+  gameVersion: string;
+  mapId: number;
+  gameMode: string;
+  teams: TeamStatsDto[];
+  participantIdentities: ParticipantIdentityDto[];
+  participants: ParticipantDto[];
+}
+
+export interface MatchInformation2 {
+  gameId: number;
   participantIdentities: ParticipantIdentityDto[];
   queueId: number;
   gameType: string;
-  gameDuration: bigint;
+  gameDuration: number;
   teams: TeamStatsDto[];
   platformId: string;
-  gameCreation: bigint;
+  gameCreation: number;
   seasonId: number;
   gameVersion: string;
   mapId: number;

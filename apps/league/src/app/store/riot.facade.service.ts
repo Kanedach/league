@@ -19,7 +19,8 @@ export class RiotFacadeService {
       getSummonr: (): Observable<Summoner> => this.store$.select(riotSelectors.getSummonerName),
       getChampionMasteries: (): Observable<ChampionMastery[]> => this.store$.select(riotSelectors.getChampionMasteries),
       getLeague: ((): Observable<LeagueEntries[]> => this.store$.select(riotSelectors.getLeague).pipe(filterNull())),
-      getMatchList: ((): Observable<MatchList> => this.store$.select(riotSelectors.getMatchList).pipe(filterNull()))
+      getMatchList: ((): Observable<MatchList> => this.store$.select(riotSelectors.getMatchList).pipe(filterNull())),
+      getMatchHistory: ():void => this.store$.dispatch(riotActions.fetchAllGames())
     }
   }
 

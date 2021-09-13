@@ -32,7 +32,11 @@ export class AppService {
 
   getMatchList(accountId: string): Observable<AxiosResponse<MatchList[]>>{
     return this.httpService.get<MatchList[]>(environment.riot_api_euw_url + '/lol/match/v4/matchlists/by-account/' + accountId, {headers: {
-        'X-Riot-Token': environment.riot_api_token
+        'X-Riot-Token': environment.riot_api_token,
+      },
+      params: {
+        'beginIndex': 0,
+        'endIndex': 20
       }}
     ).pipe(tap(res => console.log(res.config.url)));
   }

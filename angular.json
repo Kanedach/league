@@ -184,7 +184,7 @@
           "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/league-e2e/cypress.json",
-            "devServerTarget": "league:serve:development",
+            "devServerTarget": "league:serve:mocked",
             "tsConfig": "apps/league-e2e/tsconfig.json"
           },
           "configurations": {

@@ -1,25 +1,8 @@
-<div class="ui two column centered grid">
-  <div class="column" style="margin-top: 20px">
-    <h2 class="ui header">
-      League Dashboard
-      <div class="sub header">a small nx project</div>
-    </h2>
+<div class="ui stackable one column grid" style="margin: 10px">
+  <div class="column">
+    <league-header></league-header>
   </div>
-</div>
-<league-summoner-search></league-summoner-search>
-<league-summoner style="margin-top: 20px"></league-summoner>
-<div class="ui two column centered grid">
-  <div class="column" style="margin-top: 20px">
-    <league-league></league-league>
-  </div>
-</div>
-<div class="ui two column centered grid" style="margin-top: 40px">
-  <div class="column" style="margin-top: 20px">
-    <league-champion-masteries></league-champion-masteries>
-  </div>
-</div>
-<div class="ui two column centered grid">
-  <div class="column" style="margin-top: 20px">
-    <league-match-list></league-match-list>
+  <div class="column">
+    <router-outlet></router-outlet>
   </div>
 </div>

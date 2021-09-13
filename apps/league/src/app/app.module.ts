@@ -18,24 +18,33 @@ import { ChampionMasteriesComponent } from './riot/champion-masteries/champion-m
 import { LeagueComponent } from './riot/league/league.component';
 import { MatchListComponent } from './riot/match-list/match-list.component';
 import {conditionalModules, conditionalProviders} from "../environments/environment";
-import { CardComponent } from './riot/league/card/card.component';
 import { RiftPipe } from './riot/league/rift.pipe';
 import { QueuePipe } from './riot/match-list/queue.pipe';
+import { CampionMasteriesComponent } from './page/campion-masteries/campion-masteries.component';
+import { SearchComponent } from './page/search/search.component';
+import {RouterModule} from "@angular/router";
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './lib/header/header.component';
+import { ChampionPipe } from './riot/lib/champion.pipe';
+
+
 
 @NgModule({
-  declarations: [AppComponent, SummonerSearchComponent, SummonerComponent, ChampionMasteriesComponent, LeagueComponent, MatchListComponent, CardComponent, RiftPipe, QueuePipe],
+  declarations: [AppComponent, SummonerSearchComponent, SummonerComponent, ChampionMasteriesComponent, LeagueComponent, MatchListComponent, RiftPipe, QueuePipe, CampionMasteriesComponent, SearchComponent, HeaderComponent, ChampionPipe],
   imports: [
     BrowserModule,
     HttpClientModule,
     SuiModule,
     StoreModule.forRoot({riot: riotReducer}, {}),
     StoreDevtoolsModule.instrument({
-    maxAge: 25,
-    logOnly: environment.production
-  }),
+      maxAge: 25,
+      logOnly: environment.production
+    }),
     EffectsModule.forRoot([RiotEffects]),
     ReactiveFormsModule,
-    ...conditionalModules
+    ...conditionalModules,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [RiotFacadeService],
   bootstrap: [AppComponent],

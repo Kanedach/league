@@ -1,26 +1,20 @@
 <ng-container *ngIf="(league$|async)!.length > 0">
-  <h2 class="ui header">
-    <i class="trophy icon"></i>
-    <div class="content">
-      League
-    </div>
-  </h2>
-  <div class="ui three column grid">
-    <div class="column" *ngFor="let o of (league$|async)">
-      <div class="ui fluid card">
-        <div class="content">
-          <div class="center aligned header">{{o.tier}} {{o.rank}}</div>
-          <div class="center aligned description">
-            <p>{{o.queueType | rift}}</p>
-            <img src="../../../assets/ranked-emblems/{{o.tier | lowercase}}.png" width="170px">
+  <div class="ui stackable two column grid" cy-test-data="league-component">
+    <ng-container *ngFor="let o of (league$|async)">
+      <div class="column" [attr.cy-test-data]="'league-component-' + o.queueType">
+        <h2 class="ui header">
+          <img src="../../../assets/ranked-emblems/{{o.tier | lowercase}}.png" class="ui circular image">
+          <div class="content">
+            <span [attr.cy-test-data]="'league-component-' + o.queueType + '-rank'">{{o.tier}} {{o.rank}}</span>
+            <div class="sub header"><span>{{o.queueType | rift}}</span>
+              <br>
+              <span>Win: {{o.wins}} - Losses: {{o.losses}}</span></div>
           </div>
-        </div>
-        <div class="extra content">
-          <div class="center aligned author">
-            <p>Win: {{o.wins}} - Losses: {{o.losses}}</p>
-          </div>
-        </div>
+        </h2>
       </div>
-    </div>
+    </ng-container>
   </div>
 </ng-container>
+
+
+

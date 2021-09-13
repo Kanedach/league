@@ -3,8 +3,9 @@ import {IRiot} from "../reducers/riot.reducer";
 import {createAction, Store} from "@ngrx/store";
 import {RiotService} from "../../riot.service";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {map, mergeMap, switchMap, tap} from "rxjs/operators";
+import {map, mergeMap, switchMap, tap, withLatestFrom} from "rxjs/operators";
 import * as riotActions from '../actions/riot.actions'
+import * as riotSelectors from '../selectors/riot.selectors';
 import {DDragonService} from "../../ddragon.service";
 
 @Injectable()
@@ -24,11 +25,24 @@ export class RiotEffects {
             riotActions.fetchedSummoner({summoner: fetchedSummoner}),
             riotActions.fetchChampionMasteries({summonersId: fetchedSummoner.id}),
             riotActions.fetchLeague({summonersId: fetchedSummoner.id}),
-            riotActions.fetchMatchList({accountId: fetchedSummoner.accountId}),
+            riotActions.fetchMatchList({accountId: fetchedSummoner.accountId})
           ]
         ))
       ))
   });
+
+  fetchGames = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(riotActions.fetchAllGames),
+      withLatestFrom(
+        this.store$.select(riotSelectors.allGameIds)
+      ),
+      switchMap(([action, gameId]) => {
+        // @ts-ignore
+        return gameId.map(game => riotActions.fetchGame({gameId: game}));
+      })
+    )
+  })
 
 
   public fetchChampionMasteries = createEffect(() => {
@@ -75,5 +89,15 @@ export class RiotEffects {
       ))
     )
   });
+
+  public getMatchHistory = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(riotActions.fetchGame),
+      mergeMap((action) => this.riotService.getMatchHistory(action.gameId).pipe(
+        map((matchInformation) => riotActions.fetchedGame({
+          matchInformation
+        }))
+      )));
+        })
 
 }

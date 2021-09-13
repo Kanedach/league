@@ -8,7 +8,7 @@ import {
   Summoner
 } from "@league/api-interfaces";
 
-export const fetchSummonerName = createAction('[Riot] Fetch summoner information',
+export const fetchSummonerName = createAction('[Riot] Fetch summoner',
   props<{ summonerName: string }>());
 export const fetchedSummoner = createAction('[Riot] Fetched summoner',
   props<{ summoner: Summoner }>());
@@ -36,3 +36,12 @@ export const fetchedMatchHistory = createAction('[Riot] Fetched Match history',
 export const fetchChampions = createAction('[DDragon] Fetch Champions');
 export const fetchedChampions = createAction('[DDragon] Fetched Champions',
   props<{ddChampions: DDChampion}>())
+
+export const fetchGame = createAction('[Riot] Fetch Game',
+  props<{gameId: string}>());
+export const fetchedGame = createAction('[Riot] Fetched Game',
+  props<{matchInformation: MatchInformation}>());
+
+export const fetchAllGames = createAction('[Riot] Fetch all Games');
+
+

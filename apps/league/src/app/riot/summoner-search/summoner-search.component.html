@@ -1,17 +1,14 @@
-<div class="ui two column centered grid">
-    <div class="column">
-      <form [formGroup]="summonersForm" (ngSubmit)="onSubmit()">
-        <div class="ui input focus">
-          <div class="ui right labeled input">
-            <input type="text" placeholder="Summoners name..." formControlName="name">
-            <div class="ui basic label">
-              EUW
-            </div>
+<form [formGroup]="summonersForm" (ngSubmit)="onSubmit()">
+      <div class="ui input focus">
+        <div class="ui right labeled input">
+          <input type="text" placeholder="Summoners name..." formControlName="name" id="search">
+          <div class="ui basic label">
+            EUW
           </div>
         </div>
-        <button class="ui primary button" style="margin-left: 20px" type="submit" [disabled]="!summonersForm.valid"
-                (submit)="onSubmit()">Search
-        </button>
-      </form>
-    </div>
-</div>
+      </div>
+      <button class="ui primary button" type="submit" [disabled]="!summonersForm.valid"
+              (submit)="onSubmit()" style="margin-left: 10px">Search
+      </button>
+</form>
+
