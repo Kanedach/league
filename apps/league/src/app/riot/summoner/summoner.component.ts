@@ -10,7 +10,7 @@ import {Summoner} from "@league/api-interfaces";
 })
 export class SummonerComponent implements OnInit {
 
-  public summonerName$: Observable<Summoner> | undefined;
+  public summonerName$: Observable<Summoner | null> | undefined;
 
   constructor(private riotFacadeService: RiotFacadeService) { }
 

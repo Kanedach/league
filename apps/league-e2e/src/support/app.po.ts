@@ -17,5 +17,4 @@ export const getChampionPointsCy = () => cy.get('[cy-test-data="championMasterie
 export const getChampionLastPlayedCy = () => cy.get('[cy-test-data="championMasteries-champion-lastPlayed"]')
 
 //Match-List
-export const getMatchListButtonCy = () => cy.get('[cy-test-data="matchListButton"]')
 export const getMatchListQueueCy = () => cy.get('[cy-test-data="matchListQueue"]')

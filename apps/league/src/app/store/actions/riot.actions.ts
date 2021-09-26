@@ -38,7 +38,7 @@ export const fetchedChampions = createAction('[DDragon] Fetched Champions',
   props<{ddChampions: DDChampion}>())
 
 export const fetchGame = createAction('[Riot] Fetch Game',
-  props<{gameId: string}>());
+  props<{gameId: number}>());
 export const fetchedGame = createAction('[Riot] Fetched Game',
   props<{matchInformation: MatchInformation}>());
 

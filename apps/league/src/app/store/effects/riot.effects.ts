@@ -25,7 +25,7 @@ export class RiotEffects {
             riotActions.fetchedSummoner({summoner: fetchedSummoner}),
             riotActions.fetchChampionMasteries({summonersId: fetchedSummoner.id}),
             riotActions.fetchLeague({summonersId: fetchedSummoner.id}),
-            riotActions.fetchMatchList({accountId: fetchedSummoner.accountId})
+            riotActions.fetchMatchList({accountId: fetchedSummoner.accountId}),
           ]
         ))
       ))
@@ -33,13 +33,12 @@ export class RiotEffects {
 
   fetchGames = createEffect(() => {
     return this.actions$.pipe(
-      ofType(riotActions.fetchAllGames),
+      ofType(riotActions.fetchedMatchList),
       withLatestFrom(
         this.store$.select(riotSelectors.allGameIds)
       ),
       switchMap(([action, gameId]) => {
-        // @ts-ignore
-        return gameId.map(game => riotActions.fetchGame({gameId: game}));
+        return gameId!.map(game => riotActions.fetchGame({gameId: Number(game)}));
       })
     )
   })
@@ -48,7 +47,7 @@ export class RiotEffects {
   public fetchChampionMasteries = createEffect(() => {
     return this.actions$.pipe(
       ofType(riotActions.fetchChampionMasteries),
-      mergeMap((action) => this.riotService.getChampionMasteries(action.summonersId).pipe(
+      switchMap((action) => this.riotService.getChampionMasteries(action.summonersId).pipe(
         map((championMastery) => riotActions.fetchedChampionMasteries({
           championMastery
         }))

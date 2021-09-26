@@ -7,7 +7,8 @@ import {
   getChampionPointsCy,
   getGreeting,
   getLeagueFlexCy,
-  getLeagueSoloDuoCy, getMatchListButtonCy, getMatchListQueueCy,
+  getLeagueSoloDuoCy,
+  getMatchListQueueCy,
   getSearchButton,
   getSummonersNameCy
 } from '../support/app.po';
@@ -51,7 +52,6 @@ describe('league', () => {
   it('match list is present', () => {
     getAddInputText().type('kanedach');
     getSearchButton().click();
-    getMatchListButtonCy().click();
     getMatchListQueueCy().contains('5v5 Ranked Solo games');
     getMatchListQueueCy().contains('5v5 ARAM games');
     getMatchListQueueCy().contains('5v5 Ranked Flex games');

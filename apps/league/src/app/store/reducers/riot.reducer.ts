@@ -3,50 +3,35 @@ import {ChampionMastery, DDChampion, LeagueEntries, MatchList, Summoner} from "@
 import * as riotActions from '../actions/riot.actions'
 import {AddMatchToMatchList} from "../../riot/lib/add-match-to-match-list";
 
-export interface IRiot {
-  summoner: {
-    isLoading: boolean;
-    summoner: Summoner;
-  },
-  championMasteries: {
-    isLoading: boolean;
-    championMasteries: ChampionMastery[]
-  },
-  league: {
-    isLoading: boolean;
-    league: LeagueEntries[]
-  },
-  matchList: {
-    isLoading: boolean;
-    matchList: MatchList | null
-  },
-  champions: DDChampion | null
+export interface AsyncStoreModel<T> {
+  data: T | null;
+  isLoading: boolean;
 }
 
-const initRiot: IRiot = {
+export interface IRiot {
+  summoner: AsyncStoreModel<Summoner>;
+  championMasteries: AsyncStoreModel<ChampionMastery[]>;
+  league: AsyncStoreModel<LeagueEntries[]>;
+  matchList: AsyncStoreModel<MatchList>;
+  champions: DDChampion | null;
+}
+
+export const initRiot: IRiot = {
   summoner: {
     isLoading: false,
-    summoner: {
-      id: '',
-      accountId: '',
-      puuid: '',
-      name: '',
-      profileIconId: 0,
-      revisionDate: 0,
-      summonerLevel: 0,
-    }
+    data: null
   },
   championMasteries: {
     isLoading: false,
-    championMasteries: []
+    data: []
   },
   league: {
     isLoading: false,
-    league: []
+    data: []
   },
   matchList: {
     isLoading: false,
-    matchList: null
+    data: null
   },
   champions: null
 }
@@ -70,7 +55,7 @@ const reducer = createReducer(
       ...state,
       summoner: {
         isLoading: false,
-        summoner
+        data: summoner
       }
     }
   )),
@@ -84,7 +69,7 @@ const reducer = createReducer(
   on(riotActions.fetchedChampionMasteries, (state, {championMastery}) => ({
     ...state,
     championMasteries: {
-      championMasteries: championMastery,
+      data: championMastery,
       isLoading: false
     }
   })),
@@ -98,7 +83,7 @@ const reducer = createReducer(
   on(riotActions.fetchedLeague, (state, {leagueEntry}) => ({
     ...state,
     league: {
-      league: leagueEntry,
+      data: leagueEntry,
       isLoading: false
     }
   })),
@@ -112,7 +97,7 @@ const reducer = createReducer(
   on(riotActions.fetchedMatchList, (state, {matchList}) => ({
     ...state,
     matchList: {
-      matchList,
+      data: matchList,
       isLoading: false
     }
   })),
@@ -124,11 +109,10 @@ const reducer = createReducer(
     ...state,
     matchList: {
       ...state.matchList,
-      // @ts-ignore
-      matchList: {
-        ...state.matchList.matchList,
+      data: {
+        ...state.matchList.data,
         // @ts-ignore
-        matches: addMatchToList.addMatchToMatchList(state.matchList.matchList.matches, matchInformation)
+        matches: addMatchToList.addMatchToMatchList(state.matchList.data!.matches, matchInformation)
       }
     }
   }))

@@ -12,22 +12,22 @@ export class RiotService {
   }
 
   public getSummoner(summonerName: string): Observable<Summoner> {
-    return this.http.get<Summoner>('/api/summoner/' + summonerName.toLocaleLowerCase())
+    return this.http.get<Summoner>('/api/summoner/' + summonerName.toLocaleLowerCase());
   }
 
   public getChampionMasteries(summonersId: string): Observable<ChampionMastery[]> {
-    return this.http.get<ChampionMastery[]>('/api/champion-masteries/' + summonersId)
+    return this.http.get<ChampionMastery[]>('/api/champion-masteries/' + summonersId);
   }
 
   public getLeague(summonersId: string): Observable<LeagueEntries[]> {
-    return this.http.get<LeagueEntries[]>('/api/league/' + summonersId)
+    return this.http.get<LeagueEntries[]>('/api/league/' + summonersId);
   }
 
   public getMatchList(accountId: string): Observable<MatchList> {
-    return this.http.get<MatchList>('/api/match-list/' + accountId)
+    return this.http.get<MatchList>('/api/match-list/' + accountId);
   }
 
-  public getMatchHistory(matchId: string): Observable<MatchInformation> {
-    return this.http.get<MatchInformation>('/api/match/' + matchId)
+  public getMatchHistory(matchId: number): Observable<MatchInformation> {
+    return this.http.get<MatchInformation>('/api/match/' + matchId);
   }
 }

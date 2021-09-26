@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RiotFacadeService} from "../../store/riot.facade.service";
 import {Observable} from "rxjs";
-import {MatchList} from "@league/api-interfaces";
+import {MatchInformationAdded, MatchList} from "@league/api-interfaces";
 
 @Component({
   selector: 'league-match-list',
@@ -10,19 +10,17 @@ import {MatchList} from "@league/api-interfaces";
 })
 export class MatchListComponent implements OnInit {
 
-  public matchs$: Observable<MatchList>
+  public matchs$: Observable<MatchList>;
+  public matches$: Observable<MatchInformationAdded>;
 
   constructor(
     private riotFacadeService: RiotFacadeService) {
-    this.matchs$ = this.riotFacadeService.riotUi.getMatchList()
+    this.matchs$ = this.riotFacadeService.riotUi.getMatchList();
+    this.matches$ = this.riotFacadeService.riotUi.getMatches();
   }
 
   ngOnInit(): void {
 
-  }
-
-  history(): void {
-    this.riotFacadeService.riotUi.getMatchHistory();
   }
 
 }

@@ -15,14 +15,14 @@ export interface Summoner {
 }
 
 export interface ChampionMastery {
-  championPointsUntilNextLevel: bigint;
+  championPointsUntilNextLevel: number;
   chestGranted: boolean;
-  championId: bigint;
-  lastPlayTime: bigint;
+  championId: number;
+  lastPlayTime: number;
   championLevel: number;
   summonerId: string;
   championPoints: number;
-  championPointsSinceLastLevel: bigint;
+  championPointsSinceLastLevel: number;
   tokensEarned: number;
   champion?: Champion | null |undefined;
 }
@@ -164,26 +164,26 @@ export interface ParticipantStatsDto {
   quadraKills: number;
   pentaKills: number;
   unrealKills: number;
-  totalDamageDealt: bigint;
-  magicDamageDealt: bigint;
-  physicalDamageDealt: bigint;
-  trueDamageDealt: bigint;
+  totalDamageDealt: number;
+  magicDamageDealt: number;
+  physicalDamageDealt: number;
+  trueDamageDealt: number;
   largestCriticalStrike: number;
-  totalDamageDealtToChampions: bigint;
-  magicDamageDealtToChampions: bigint;
-  physicalDamageDealtToChampions: bigint;
-  trueDamageDealtToChampions: bigint;
-  totalHeal: bigint;
-  totalUnitsHealed: bigint;
-  damageSelfMitigated: bigint;
-  damageDealtToObjectives: bigint;
-  damageDealtToTurrets: bigint;
-  visionScore: bigint;
+  totalDamageDealtToChampions: number;
+  magicDamageDealtToChampions: number;
+  physicalDamageDealtToChampions: number;
+  trueDamageDealtToChampions: number;
+  totalHeal: number;
+  totalUnitsHealed: number;
+  damageSelfMitigated: number;
+  damageDealtToObjectives: number;
+  damageDealtToTurrets: number;
+  visionScore: number;
   timeCCingOthers: number;
-  totalDamageTaken: bigint;
-  magicalDamageTaken: bigint;
-  physicalDamageTaken: bigint;
-  trueDamageTaken: bigint;
+  totalDamageTaken: number;
+  magicalDamageTaken: number;
+  physicalDamageTaken: number;
+  trueDamageTaken: number;
   goldEarned: number;
   goldSpent: number;
   turretKills: number;
@@ -285,4 +285,36 @@ export interface MiniSeriesDTO {
   progress: string  | null;
   target: number  | null;
   wins: number  | null
+}
+
+export interface MatchInformationAdded {
+  startIndex: number;
+  endIndex: number;
+  totalGames: number;
+  matches: MatchInformationAddedMatches[];
+}
+
+export interface MatchInformationAddedMatches {
+  Won: boolean;
+  gameCreation: number;
+  participantId: number;
+  match: MatchInformationAddedMatch[];
+}
+
+export interface MatchInformationAddedMatch {
+  team: MatchInformationAddedTeam[];
+  teamId: number;
+  win: string;
+}
+
+export interface MatchInformationAddedTeam {
+  championId: number;
+  championName: string;
+  summonerId: string;
+  summonerName: string;
+  championImage: {
+    full: string;
+    group: string;
+    sprite: string;
+  }
 }
