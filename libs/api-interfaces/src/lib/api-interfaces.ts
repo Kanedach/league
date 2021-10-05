@@ -288,9 +288,9 @@ export interface MiniSeriesDTO {
 }
 
 export interface MatchInformationAdded {
-  startIndex: number;
-  endIndex: number;
-  totalGames: number;
+  startIndex: number | null;
+  endIndex: number | null;
+  totalGames: number | null;
   matches: MatchInformationAddedMatches[];
 }
 

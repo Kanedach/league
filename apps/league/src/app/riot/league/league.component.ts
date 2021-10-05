@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {RiotFacadeService} from "../../store/riot.facade.service";
-import {Observable} from "rxjs";
+import {Component, Input, OnInit} from '@angular/core';
 import {LeagueEntries} from "@league/api-interfaces";
 
 @Component({
@@ -10,10 +8,9 @@ import {LeagueEntries} from "@league/api-interfaces";
 })
 export class LeagueComponent implements OnInit {
 
-  public league$: Observable<LeagueEntries[]>
+  @Input() league: LeagueEntries[] | undefined;
 
-  constructor(private riotFacadeService: RiotFacadeService) {
-    this.league$ = riotFacadeService.riotUi.getLeague();
+  constructor() {
   }
 
   ngOnInit(): void {

@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ChampionMastery, Summoner} from "@league/api-interfaces";
-import {Observable} from "rxjs";
-import {RiotFacadeService} from "../../store/riot.facade.service";
+import {Component, Input, OnInit} from '@angular/core';
+import {ChampionMastery} from "@league/api-interfaces";
 
 @Component({
   selector: 'league-champion-masteries',
@@ -10,14 +8,12 @@ import {RiotFacadeService} from "../../store/riot.facade.service";
 })
 export class ChampionMasteriesComponent implements OnInit {
 
-  public championMasteries$: Observable<ChampionMastery[]>;
+  @Input() championMasteries: ChampionMastery[] | undefined;
 
-  constructor(private riotFacadeService: RiotFacadeService) {
-    this.championMasteries$ = this.riotFacadeService.riotUi.getChampionMasteries();
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.riotFacadeService.dDragonUi.fetchChampions();
   }
 
 }

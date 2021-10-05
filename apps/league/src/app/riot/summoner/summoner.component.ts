@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {RiotFacadeService} from "../../store/riot.facade.service";
 import {Observable} from "rxjs";
 import {Summoner} from "@league/api-interfaces";
@@ -10,12 +10,12 @@ import {Summoner} from "@league/api-interfaces";
 })
 export class SummonerComponent implements OnInit {
 
-  public summonerName$: Observable<Summoner | null> | undefined;
+  @Input() summoner: Summoner | undefined;
 
-  constructor(private riotFacadeService: RiotFacadeService) { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.summonerName$ = this.riotFacadeService.riotUi.getSummonr();
   }
 
 }

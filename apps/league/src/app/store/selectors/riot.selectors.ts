@@ -59,14 +59,11 @@ export const getMatchList = createSelector(matchList, (state): MatchList | null 
 export const getChampions = createSelector(champions, (state): Champion[] | null | undefined => state?.data);
 export const allGameIds = createSelector(matchList, (state): string[] | null | undefined => state.data?.matches.map(o => o.gameId.toString()));
 export const matches = createSelector(matchList, champions, (state, champions): MatchInformationAdded => ({
+  endIndex: state.data!.endIndex,
+  startIndex: state.data!.startIndex,
+  totalGames: state.data!.totalGames,
   // @ts-ignore
-  endIndex: state.data?.endIndex,
-  // @ts-ignore
-  startIndex: state.data?.startIndex,
-  // @ts-ignore
-  totalGames: state.data?.totalGames,
-  // @ts-ignore
-  matches: state.data?.matches.map(matches => ({
+  matches: state.data!.matches.map(matches => ({
     gameCreation: matches.matchInformation?.gameCreation,
     // @ts-ignore
     participantId: matches.matchInformation.participantIdentities.find(summoner => summoner.player.summonerName === "Kanedach").participantId,

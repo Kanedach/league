@@ -1,9 +1,9 @@
-<ng-container *ngIf="(matchs$|async) !== null">
+{{matches|json}}
+<ng-container *ngIf="matches !== null && matches !== undefined">
   <h4 class="ui horizontal divider header" style="margin: 20PX 0px 20px 0px">
     <i class="bookmark outline icon"></i>
     Champion Masteries
   </h4>
-  {{matches$ | async | json}}
   <div class="ui celled list">
         <div class="item">
           <div class="content">

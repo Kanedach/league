@@ -1,27 +1,27 @@
-<ng-container *ngIf="(championMasteries$|async)?.length > 0">
-  <h4 class="ui horizontal divider header" style="margin: 20PX 0px 20px 0px">
-    <i class="id badge outline icon"></i>
-    Champion Masteries
-  </h4>
-  <div class="ui stackable four column grid" cy-test-data="championMasteries-component">
-    <div class="column" *ngFor="let o of (championMasteries$|async | slice:0:4); let i = index">
-      <div class="ui fluid card">
-        <div class="content">
-          <div class="center aligned header" [attr.cy-test-data]="'championMasteries-champion-name'">{{o.champion.name}}</div>
-          <div class="center aligned description">
-            <p>{{o.champion.title}}</p>
-            <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{o.champion.name.replace(' ','')}}_0.jpg" style="width: 160px">
+  <ng-container *ngIf="championMasteries !== null && championMasteries !== undefined && championMasteries.length > 0">
+    <h4 class="ui horizontal divider header" style="margin: 20PX 0px 20px 0px">
+      <i class="id badge outline icon"></i>
+      Champion Masteries
+    </h4>
+    <div class="ui stackable four column grid" cy-test-data="championMasteries-component">
+      <div class="column" *ngFor="let o of (championMasteries | slice:0:4); let i = index">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="center aligned header" [attr.cy-test-data]="'championMasteries-champion-name'">{{o.champion.name}}</div>
+            <div class="center aligned description">
+              <p>{{o.champion.title}}</p>
+              <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{o.champion.name.replace(' ','')}}_0.jpg" style="width: 160px">
+            </div>
           </div>
-        </div>
-        <div class="extra content">
-          <div class="center aligned author">
-            <p [attr.cy-test-data]="'championMasteries-champion-level'">Level: {{o.championLevel}}</p>
-            <p [attr.cy-test-data]="'championMasteries-champion-points'">Points: {{o.championPoints | number}}</p>
-            <p [attr.cy-test-data]="'championMasteries-champion-lastPlayed'">Last Played: {{o.lastPlayTime.toString() | date: 'dd MMM yy HH:mm' }}</p>
+          <div class="extra content">
+            <div class="center aligned author">
+              <p [attr.cy-test-data]="'championMasteries-champion-level'">Level: {{o.championLevel}}</p>
+              <p [attr.cy-test-data]="'championMasteries-champion-points'">Points: {{o.championPoints | number}}</p>
+              <p [attr.cy-test-data]="'championMasteries-champion-lastPlayed'">Last Played: {{o.lastPlayTime.toString() | date: 'dd MMM yy HH:mm' }}</p>
+            </div>
           </div>
         </div>
       </div>
+      <!-- <button class="fluid ui button" style="margin: 0px 12px 0px 12px">Show all</button> -->
     </div>
-    <!-- <button class="fluid ui button" style="margin: 0px 12px 0px 12px">Show all</button> -->
-  </div>
-</ng-container>
+  </ng-container>

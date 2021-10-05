@@ -26,7 +26,7 @@ export class RiotFacadeService {
       getChampionMasteries: (): Observable<ChampionMastery[]> => this.store$.select(riotSelectors.getChampionMasteries),
       getLeague: ((): Observable<LeagueEntries[]> => this.store$.select(riotSelectors.getLeague).pipe(filterNull())),
       getMatchList: ((): Observable<MatchList> => this.store$.select(riotSelectors.getMatchList).pipe(filterNull())),
-      getMatches: ((): Observable<MatchInformationAdded> => this.store$.select(riotSelectors.matches))
+      getMatches: ((): Observable<any> => this.store$.select(riotSelectors.matchList))
     }
   }
 
