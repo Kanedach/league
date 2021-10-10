@@ -1,12 +1,11 @@
 <league-summoner-search></league-summoner-search>
 <div class="ui stackable two column grid" style="margin-top: 10px">
   <div class="column">
-    <league-summoner [summoner]="summoner$|async"></league-summoner>
+    <league-summoner [summoner]="summoner$ | async"></league-summoner>
   </div>
   <div class="column">
-    <league-league [league]="league$|async"></league-league>
+    <league-league [league]="league$ | async"></league-league>
   </div>
 </div>
-<league-champion-masteries [championMasteries]="championMastery$|async"></league-champion-masteries>
-<league-match-list [matches]="matches$|async"></league-match-list>
-
+<league-champion-masteries [championMasteries]="championMastery$ | async"></league-champion-masteries>
+<league-match-list [matches]="matches$ | async"></league-match-list>

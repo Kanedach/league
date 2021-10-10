@@ -1,7 +1,7 @@
-import {CallHandler, ExecutionContext, Injectable, NestInterceptor} from "@nestjs/common";
-import {environment} from "../environments/environment";
-import {Observable} from "rxjs";
-import {tap} from "rxjs/operators";
+import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nestjs/common';
+import { environment } from '../environments/environment';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class RiotInterceptor implements NestInterceptor {

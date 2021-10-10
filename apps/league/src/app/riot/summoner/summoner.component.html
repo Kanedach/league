@@ -1,11 +1,11 @@
 <ng-container *ngIf="summoner">
   <div class="column">
     <h2 class="ui header">
-      <img src="http://ddragon.leagueoflegends.com/cdn/11.18.1/img/profileicon/{{summoner.profileIconId}}.png" class="ui circular image">
+      <img src="http://ddragon.leagueoflegends.com/cdn/11.18.1/img/profileicon/{{ summoner.profileIconId }}.png" class="ui circular image" />
       <ng-container *ngIf="summoner !== null">
         <div class="content" cy-test-data="summonerName">
-          {{summoner.name}}
-          <div class="sub header">Level: {{summoner.summonerLevel}}</div>
+          {{ summoner.name }}
+          <div class="sub header">Level: {{ summoner.summonerLevel }}</div>
         </div>
       </ng-container>
     </h2>

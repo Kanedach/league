@@ -9,7 +9,9 @@
     "start-dev": "nx run league:serve:mocked",
     "build": "nx build",
     "test": "nx test",
-    "start-be": "nx serve api"
+    "start-be": "nx serve api",
+    "format:check": "prettier --check --loglevel warn \"**/*.+(ts|json|html|md|scss)\"",
+    "format:write": "prettier --write --loglevel warn \"**/*.+(ts|json|html|md|scss)\""
   },
   "private": true,
   "dependencies": {

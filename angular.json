@@ -159,10 +159,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/league/src/**/*.ts",
-              "apps/league/src/**/*.html"
-            ]
+            "lintFilePatterns": ["apps/league/src/**/*.ts", "apps/league/src/**/*.html"]
           }
         },
         "test": {

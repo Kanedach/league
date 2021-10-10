@@ -1,14 +1,9 @@
 <form [formGroup]="summonersForm" (ngSubmit)="onSubmit()">
-      <div class="ui input focus">
-        <div class="ui right labeled input">
-          <input type="text" placeholder="Summoners name..." formControlName="name" id="search">
-          <div class="ui basic label">
-            EUW
-          </div>
-        </div>
-      </div>
-      <button class="ui primary button" type="submit" [disabled]="!summonersForm.valid"
-              (submit)="onSubmit()" style="margin-left: 10px">Search
-      </button>
+  <div class="ui input focus">
+    <div class="ui right labeled input">
+      <input type="text" placeholder="Summoners name..." formControlName="name" id="search" />
+      <div class="ui basic label">EUW</div>
+    </div>
+  </div>
+  <button class="ui primary button" type="submit" [disabled]="!summonersForm.valid" (submit)="onSubmit()" style="margin-left: 10px">Search</button>
 </form>
-

@@ -1,4 +1,4 @@
-import {Champion} from "./ddragon-interface";
+import { Champion } from './ddragon-interface';
 
 export interface Message {
   message: string;
@@ -24,17 +24,17 @@ export interface ChampionMastery {
   championPoints: number;
   championPointsSinceLastLevel: number;
   tokensEarned: number;
-  champion?: Champion | null |undefined;
+  champion?: Champion | null | undefined;
 }
 
 export interface MatchList {
-  matches: Matches[];
+  matches: Match[];
   startIndex: number | null;
   endIndex: number | null;
   totalGames: number | null;
 }
 
-export interface Matches {
+export interface Match {
   gameId: number;
   role: string;
   season: number;
@@ -49,7 +49,7 @@ export interface Matches {
 
 export interface QueueInformation {
   queueMap?: any;
-  queueDescription?: any
+  queueDescription?: any;
 }
 
 export interface MatchInformation {
@@ -86,10 +86,10 @@ export interface MatchInformation2 {
 
 export interface ParticipantIdentityDto {
   participantId: number;
-  player: PlayerDto[];
+  player: PlayerDto;
 }
 
-export interface PlayerDto{
+export interface PlayerDto {
   profileIcon: number;
   accountId: string;
   matchHistoryUri: string;
@@ -265,29 +265,30 @@ export interface MasteryDto {
 
 export interface LeagueEntries {
   leagueId?: string | null;
-  summonerId?: string  | null;
-  summonerName: string  | null;
-  queueType?: string  | null;
-  tier?: string  | null;
-  rank?: string  | null;
-  leaguePoints?: number  | null;
-  wins?: string  | null;
-  losses?: string  | null;
-  hotStreak?: boolean  | null;
-  veteran?:boolean  | null;
-  freshBlood?: boolean  | null;
-  inactive?: boolean  | null;
+  summonerId?: string | null;
+  summonerName: string | null;
+  queueType?: string | null;
+  tier?: string | null;
+  rank?: string | null;
+  leaguePoints?: number | null;
+  wins?: string | null;
+  losses?: string | null;
+  hotStreak?: boolean | null;
+  veteran?: boolean | null;
+  freshBlood?: boolean | null;
+  inactive?: boolean | null;
   miniSeries?: MiniSeriesDTO[] | [];
 }
 
 export interface MiniSeriesDTO {
-  losses: number  | null;
-  progress: string  | null;
-  target: number  | null;
-  wins: number  | null
+  losses: number | null;
+  progress: string | null;
+  target: number | null;
+  wins: number | null;
 }
 
 export interface MatchInformationAdded {
+  version: string | null;
   startIndex: number | null;
   endIndex: number | null;
   totalGames: number | null;
@@ -295,9 +296,14 @@ export interface MatchInformationAdded {
 }
 
 export interface MatchInformationAddedMatches {
+  gameDuration: number | null;
+  queueId: number | null;
+  mapId: number| null;
+  gameMode: string |null;
+  gameType: string | null
   Won: boolean;
-  gameCreation: number;
-  participantId: number;
+  gameCreation: number | null;
+  participantId: number | null;
   match: MatchInformationAddedMatch[];
 }
 
@@ -308,13 +314,20 @@ export interface MatchInformationAddedMatch {
 }
 
 export interface MatchInformationAddedTeam {
-  championId: number;
-  championName: string;
-  summonerId: string;
-  summonerName: string;
+  championId: number | null;
+  championName: string | null;
+  summonerId: string | null;
+  summonerName: string | null;
   championImage: {
     full: string;
     group: string;
     sprite: string;
-  }
+  } | null;
+}
+
+export interface QueID {
+  queueId: number;
+  map: string;
+  description: string | null;
+  notes: string | null;
 }

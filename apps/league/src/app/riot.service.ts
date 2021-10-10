@@ -1,15 +1,13 @@
-import {Injectable} from '@angular/core';
-import {Observable} from "rxjs";
-import {ChampionMastery, LeagueEntries, MatchInformation, MatchList, Summoner} from "@league/api-interfaces";
-import {HttpClient} from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ChampionMastery, LeagueEntries, MatchInformation, MatchList, Summoner } from '@league/api-interfaces';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RiotService {
-
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   public getSummoner(summonerName: string): Observable<Summoner> {
     return this.http.get<Summoner>('/api/summoner/' + summonerName.toLocaleLowerCase());

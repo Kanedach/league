@@ -1,5 +1,5 @@
-import {MockedDataInterceptor} from "../mocked-data.interceptor";
-import * as champion from "./json/champion.json";
+import { MockedDataInterceptor } from '../mocked-data.interceptor';
+import * as champion from './json/champion.json';
 
 export class DdragonApiMockInterceptor extends MockedDataInterceptor {
   constructor() {
@@ -8,8 +8,8 @@ export class DdragonApiMockInterceptor extends MockedDataInterceptor {
         urlRegExp: /champion/,
         computedBody: () => {
           return champion;
-        }
-      }
+        },
+      },
     ]);
   }
 }

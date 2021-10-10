@@ -10,12 +10,12 @@ import {
   getLeagueSoloDuoCy,
   getMatchListQueueCy,
   getSearchButton,
-  getSummonersNameCy
+  getSummonersNameCy,
 } from '../support/app.po';
 
 describe('league', () => {
   beforeEach(() => {
-    cy.visit('/'), cy.viewport('macbook-15')
+    cy.visit('/'), cy.viewport('macbook-15');
   });
 
   it('should display Title', () => {
@@ -35,8 +35,8 @@ describe('league', () => {
   it('summoner League is present', () => {
     getAddInputText().type('kanedach');
     getSearchButton().click();
-    getLeagueSoloDuoCy().should('have.text', 'SILVER III')
-    getLeagueFlexCy().should('have.text', 'SILVER II')
+    getLeagueSoloDuoCy().should('have.text', 'SILVER III');
+    getLeagueFlexCy().should('have.text', 'SILVER II');
   });
 
   it('champion Mastery is present', () => {
@@ -45,17 +45,14 @@ describe('league', () => {
     getChampionElementsCy().find('.column').should('have.length', 4);
     getChampionNameCy().contains('Urgot');
     getChampionLevelCy().contains('7');
-    getChampionPointsCy().contains('408,443')
+    getChampionPointsCy().contains('408,443');
     getChampionLastPlayedCy().contains('Last Played: 01 Sep 21 16:34');
   });
 
   it('match list is present', () => {
     getAddInputText().type('kanedach');
     getSearchButton().click();
-    getMatchListQueueCy().contains('5v5 Ranked Solo games');
-    getMatchListQueueCy().contains('5v5 ARAM games');
-    getMatchListQueueCy().contains('5v5 Ranked Flex games');
+    getMatchListQueueCy().contains('Summoner\'s Rift');
+    getMatchListQueueCy().contains('Howling Abyss');
   });
-
-
 });

@@ -1,7 +1,15 @@
-import {Action, createReducer, on} from "@ngrx/store";
-import {ChampionMastery, DDChampion, LeagueEntries, MatchList, Summoner} from "@league/api-interfaces";
-import * as riotActions from '../actions/riot.actions'
-import {AddMatchToMatchList} from "../../riot/lib/add-match-to-match-list";
+import { Action, createReducer, on } from '@ngrx/store';
+import {
+  ChampionMastery,
+  DDChampion,
+  LeagueEntries,
+  Match,
+  MatchInformationAdded,
+  MatchList,
+  Summoner
+} from '@league/api-interfaces';
+import * as riotActions from '../actions/riot.actions';
+import { AddMatchToMatchList } from '../../riot/lib/add-match-to-match-list';
 
 export interface AsyncStoreModel<T> {
   data: T | null;
@@ -12,111 +20,106 @@ export interface IRiot {
   summoner: AsyncStoreModel<Summoner>;
   championMasteries: AsyncStoreModel<ChampionMastery[]>;
   league: AsyncStoreModel<LeagueEntries[]>;
-  matchList: AsyncStoreModel<MatchList>;
+  matchList: AsyncStoreModel<any>;
   champions: DDChampion | null;
 }
 
 export const initRiot: IRiot = {
   summoner: {
     isLoading: false,
-    data: null
+    data: null,
   },
   championMasteries: {
     isLoading: false,
-    data: []
+    data: [],
   },
   league: {
     isLoading: false,
-    data: []
+    data: [],
   },
   matchList: {
     isLoading: false,
-    data: null
+    data: null,
   },
-  champions: null
-}
+  champions: null,
+};
 
 const addMatchToList = new AddMatchToMatchList();
 
 const reducer = createReducer(
   initRiot,
-  on(riotActions.fetchSummonerName, (state) => (
-    {
-      ...state,
-      summoner: {
-        ...state.summoner,
-        isLoading: true,
-
-      }
-    }
-  )),
-  on(riotActions.fetchedSummoner, (state, {summoner}) => (
-    {
-      ...state,
-      summoner: {
-        isLoading: false,
-        data: summoner
-      }
-    }
-  )),
-  on(riotActions.fetchChampionMasteries, (state) => ({
+  on(riotActions.fetchSummonerName, (state: IRiot): IRiot => ({
+    ...state,
+    summoner: {
+      ...state.summoner,
+      isLoading: true,
+    },
+  })),
+  on(riotActions.fetchedSummoner, (state: IRiot, { summoner }): IRiot => ({
+    ...state,
+    summoner: {
+      isLoading: false,
+      data: summoner,
+    },
+  })),
+  on(riotActions.fetchChampionMasteries, (state: IRiot): IRiot => ({
     ...state,
     championMasteries: {
       ...state.championMasteries,
-      isLoading: true
-    }
+      isLoading: true,
+    },
   })),
-  on(riotActions.fetchedChampionMasteries, (state, {championMastery}) => ({
+  on(riotActions.fetchedChampionMasteries, (state: IRiot, { championMastery }): IRiot => ({
     ...state,
     championMasteries: {
       data: championMastery,
-      isLoading: false
-    }
+      isLoading: false,
+    },
   })),
-  on(riotActions.fetchLeague, (state) => ({
+  on(riotActions.fetchLeague, (state: IRiot): IRiot => ({
     ...state,
     league: {
       ...state.league,
-      isLoading: true
-    }
+      isLoading: true,
+    },
   })),
-  on(riotActions.fetchedLeague, (state, {leagueEntry}) => ({
+  on(riotActions.fetchedLeague, (state: IRiot, { leagueEntry }): IRiot => ({
     ...state,
     league: {
       data: leagueEntry,
-      isLoading: false
-    }
+      isLoading: false,
+    },
   })),
-  on(riotActions.fetchMatchList, (state) => ({
+  on(riotActions.fetchMatchList, (state: IRiot): IRiot => ({
     ...state,
     matchList: {
       ...state.matchList,
-      isLoading: true
-    }
+      isLoading: true,
+    },
   })),
-  on(riotActions.fetchedMatchList, (state, {matchList}) => ({
+  on(riotActions.fetchedMatchList, (state: IRiot, { matchList }): IRiot => ({
     ...state,
     matchList: {
       data: matchList,
-      isLoading: false
-    }
+      isLoading: false,
+    },
   })),
-  on(riotActions.fetchedChampions, (state, {ddChampions}) => ({
+  on(riotActions.fetchedChampions, (state: IRiot, { ddChampions }): IRiot => ({
     ...state,
-    champions: ddChampions
+    champions: ddChampions,
   })),
-  on(riotActions.fetchedGame, (state, {matchInformation}) => ({
+  on(riotActions.fetchedGame, (state: IRiot, { matchInformation }): IRiot => ({
     ...state,
     matchList: {
       ...state.matchList,
       data: {
+
         ...state.matchList.data,
-        // @ts-ignore
-        matches: addMatchToList.addMatchToMatchList(state.matchList.data!.matches, matchInformation)
-      }
-    }
+        matches: addMatchToList.addMatchToMatchList(state?.matchList?.data?.matches ?? [], matchInformation),
+      },
+    },
   }))
-)
+);
 
 export function riotReducer(state: IRiot | undefined, action: Action): IRiot {
   return reducer(state, action);

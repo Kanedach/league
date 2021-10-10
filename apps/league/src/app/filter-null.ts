@@ -1,6 +1,5 @@
-
-import {filter, map} from "rxjs/operators";
-import {Observable, OperatorFunction} from "rxjs";
+import { filter, map } from 'rxjs/operators';
+import { Observable, OperatorFunction } from 'rxjs';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 export function filterNull<T>(): OperatorFunction<T | null | undefined, T> {

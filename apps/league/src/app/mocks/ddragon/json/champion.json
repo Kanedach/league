@@ -25,10 +25,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Blutbrunnen",
       "stats": {
         "hp": 580,
@@ -75,10 +72,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Assassin"
-      ],
+      "tags": ["Mage", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 526,
@@ -125,9 +119,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Energie",
       "stats": {
         "hp": 500,
@@ -174,10 +166,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -224,10 +213,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Support"
-      ],
+      "tags": ["Tank", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -274,10 +260,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 615,
@@ -324,10 +307,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 480,
@@ -374,9 +354,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 524,
@@ -423,9 +401,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -472,10 +448,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Support"
-      ],
+      "tags": ["Marksman", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -522,9 +495,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 575,
@@ -571,10 +542,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Marksman"
-      ],
+      "tags": ["Mage", "Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 552,
@@ -621,10 +589,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -671,10 +636,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 583,
@@ -721,9 +683,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 520,
@@ -770,10 +730,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Tank"
-      ],
+      "tags": ["Support", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -820,9 +777,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 510,
@@ -869,10 +824,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 576,
@@ -919,9 +871,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -968,10 +918,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 574,
@@ -1018,9 +965,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 518,
@@ -1067,10 +1012,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 582,
@@ -1117,10 +1059,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -1167,9 +1106,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 605,
@@ -1216,10 +1153,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Keine",
       "stats": {
         "hp": 583,
@@ -1266,10 +1200,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 585,
@@ -1316,10 +1247,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Fighter"
-      ],
+      "tags": ["Mage", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 534,
@@ -1366,10 +1294,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 572,
@@ -1416,10 +1341,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -1466,10 +1388,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 580.4,
@@ -1516,10 +1435,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -1566,10 +1482,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -1616,10 +1529,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 562,
@@ -1666,9 +1576,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter"
-      ],
+      "tags": ["Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -1715,10 +1623,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Keine",
       "stats": {
         "hp": 620,
@@ -1765,10 +1670,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Wut",
       "stats": {
         "hp": 510,
@@ -1815,10 +1717,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -1865,9 +1764,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 555,
@@ -1914,10 +1811,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -1964,10 +1858,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -2014,10 +1905,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 488,
@@ -2064,10 +1952,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 586,
@@ -2114,10 +1999,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 520,
@@ -2164,10 +2046,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 585,
@@ -2214,10 +2093,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 500,
@@ -2264,10 +2140,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -2314,10 +2187,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 593,
@@ -2364,10 +2234,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Marksman"
-      ],
+      "tags": ["Fighter", "Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -2414,10 +2281,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 585,
@@ -2464,9 +2328,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -2513,9 +2375,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -2562,9 +2422,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 534,
@@ -2611,10 +2469,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 534,
@@ -2661,9 +2516,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -2710,10 +2563,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 576,
@@ -2760,10 +2610,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Keine",
       "stats": {
         "hp": 602,
@@ -2810,10 +2657,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Support"
-      ],
+      "tags": ["Fighter", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -2860,10 +2704,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 585,
@@ -2910,10 +2751,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Marksman"
-      ],
+      "tags": ["Mage", "Marksman"],
       "partype": "Energie",
       "stats": {
         "hp": 541,
@@ -2960,9 +2798,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 573,
@@ -3009,9 +2845,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -3058,10 +2892,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mut",
       "stats": {
         "hp": 340,
@@ -3108,10 +2939,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 565,
@@ -3158,10 +2986,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 528,
@@ -3208,10 +3033,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Energie",
       "stats": {
         "hp": 575,
@@ -3258,10 +3080,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Support"
-      ],
+      "tags": ["Tank", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 576,
@@ -3308,10 +3127,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -3358,9 +3174,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -3407,9 +3221,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 571,
@@ -3456,10 +3268,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 525,
@@ -3506,10 +3315,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 490,
@@ -3556,10 +3362,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 574,
@@ -3606,10 +3409,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Assassin"
-      ],
+      "tags": ["Mage", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 510,
@@ -3656,10 +3456,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 565,
@@ -3706,10 +3503,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 599,
@@ -3756,9 +3550,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -3805,10 +3597,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -3855,9 +3644,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter"
-      ],
+      "tags": ["Fighter"],
       "partype": "Schild",
       "stats": {
         "hp": 575,
@@ -3904,10 +3691,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -3954,10 +3738,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 490,
@@ -4004,10 +3785,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 561,
@@ -4054,10 +3832,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 576,
@@ -4104,10 +3879,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -4154,10 +3926,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -4204,10 +3973,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 585,
@@ -4254,10 +4020,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -4304,10 +4067,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 575,
@@ -4354,10 +4114,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -4404,10 +4161,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -4454,10 +4208,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -4504,10 +4255,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -4554,10 +4302,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Assassin"
-      ],
+      "tags": ["Support", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -4604,10 +4349,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -4654,10 +4396,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 533,
@@ -4704,9 +4443,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support"
-      ],
+      "tags": ["Support"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -4753,10 +4490,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 564,
@@ -4803,9 +4537,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter"
-      ],
+      "tags": ["Fighter"],
       "partype": "Wut",
       "stats": {
         "hp": 570,
@@ -4852,9 +4584,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank"
-      ],
+      "tags": ["Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 540,
@@ -4901,10 +4631,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Zorn",
       "stats": {
         "hp": 575,
@@ -4951,10 +4678,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Wildheit",
       "stats": {
         "hp": 585,
@@ -5001,10 +4725,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Keine",
       "stats": {
         "hp": 560,
@@ -5051,10 +4772,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Hitze",
       "stats": {
         "hp": 589,
@@ -5101,10 +4819,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Fighter"
-      ],
+      "tags": ["Mage", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 575,
@@ -5151,9 +4866,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -5200,10 +4913,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -5250,10 +4960,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Support"
-      ],
+      "tags": ["Marksman", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 520,
@@ -5300,10 +5007,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 500,
@@ -5350,10 +5054,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Streitlust",
       "stats": {
         "hp": 600,
@@ -5400,9 +5101,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -5449,9 +5148,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank"
-      ],
+      "tags": ["Tank"],
       "partype": "Energie",
       "stats": {
         "hp": 540,
@@ -5498,10 +5195,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Zorn",
       "stats": {
         "hp": 595,
@@ -5548,10 +5242,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -5598,10 +5289,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 545,
@@ -5648,9 +5336,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 562,
@@ -5697,10 +5383,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -5747,10 +5430,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 480,
@@ -5797,10 +5477,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 535,
@@ -5847,10 +5524,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Fighter"
-      ],
+      "tags": ["Mage", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 525,
@@ -5897,10 +5571,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Assassin"
-      ],
+      "tags": ["Mage", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 525,
@@ -5947,10 +5618,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 523,
@@ -5997,10 +5665,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Tank"
-      ],
+      "tags": ["Support", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -6047,10 +5712,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 532,
@@ -6097,9 +5759,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 588,
@@ -6146,10 +5806,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Fighter"
-      ],
+      "tags": ["Support", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 575,
@@ -6196,10 +5853,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 528,
@@ -6246,10 +5900,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Fighter"
-      ],
+      "tags": ["Support", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -6296,10 +5947,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 559,
@@ -6346,10 +5994,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 616,
@@ -6396,10 +6041,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Zorn",
       "stats": {
         "hp": 626,
@@ -6446,9 +6088,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 534,
@@ -6495,10 +6135,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 612,
@@ -6545,10 +6182,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 594,
@@ -6595,10 +6229,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 585,
@@ -6645,10 +6276,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -6695,10 +6323,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 515,
@@ -6745,9 +6370,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 505,
@@ -6794,9 +6417,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 520,
@@ -6843,10 +6464,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 585,
@@ -6893,10 +6511,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Keine",
       "stats": {
         "hp": 560,
@@ -6943,9 +6558,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -6992,9 +6605,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Blutroter Rausch",
       "stats": {
         "hp": 537,
@@ -7041,10 +6652,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -7091,10 +6699,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -7141,9 +6746,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -7190,9 +6793,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 526,
@@ -7239,10 +6840,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -7289,10 +6887,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Fluss",
       "stats": {
         "hp": 490,
@@ -7339,10 +6934,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Fluss",
       "stats": {
         "hp": 550,
@@ -7389,10 +6981,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -7439,10 +7028,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 480,
@@ -7489,10 +7075,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Keine",
       "stats": {
         "hp": 615,
@@ -7539,9 +7122,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Energie",
       "stats": {
         "hp": 584,
@@ -7588,9 +7169,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 536,
@@ -7637,10 +7216,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 504,
@@ -7687,10 +7263,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -7737,10 +7310,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 504,

@@ -1,36 +1,37 @@
-{{matches|json}}
 <ng-container *ngIf="matches !== null && matches !== undefined">
-  <h4 class="ui horizontal divider header" style="margin: 20PX 0px 20px 0px">
+  <h4 class="ui horizontal divider header" style="margin: 20px 0px 20px 0px">
     <i class="bookmark outline icon"></i>
     Champion Masteries
   </h4>
   <div class="ui celled list">
-        <div class="item">
-          <div class="content">
-            <div class="ui stackable four column grid">
-              <div class="column">
-                <div class="header" [attr.cy-test-data]="'matchListQueue'">
-                </div>
-              </div>
-              <div class="column">
-                <div class="ui horizontal list">
-                  <div class="item">
-                    <img class="ui image"
-                         src="http://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/Aatrox.png" width="45px">
-                  </div>
-                </div>
-                <br>
-                <div class="ui horizontal list">
-                  <div class="item">
-                    <img class="ui image"
-                         src="http://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/Aatrox.png" width="45px">
-                  </div>
-                </div>
-              </div>
-              <div class="column"></div>
-              <div class="column"></div>
+    <div class="item" *ngFor="let match of matches.matches">
+      <div class="content">
+        <div class="ui stackable four column grid">
+          <div class="column">
+            <div class="header" [attr.cy-test-data]="'matchListQueue'">
+              {{match.queueId|queue}}
+              <BR>
+              {{match.gameMode}}
             </div>
           </div>
+          <div class="column">
+            {{match.gameCreation|date: 'dd.MM.YY - HH:MM'}}
+            <br>
+            {{(match.gameDuration)/60|number: '1.0-0'}} Min
+          </div>
+          <div class="column">
+            <ng-container *ngFor="let matchInformation of match.match">
+              <div class="ui horizontal list" *ngFor="let team of matchInformation.team">
+                <div class="item">
+                  <img class="ui image" src="http://ddragon.leagueoflegends.com/cdn/{{matches.version}}/img/champion/{{team.championImage.full}}" width="40px" alt="{{team.championName}}" title="{{team.summonerName}}" />
+                </div>
+              </div>
+              <br>
+            </ng-container>
+          </div>
+          <div class="column"></div>
         </div>
+      </div>
+    </div>
   </div>
 </ng-container>

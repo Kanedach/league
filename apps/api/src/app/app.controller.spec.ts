@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import {HttpService} from "@nestjs/axios";
+import { HttpService } from '@nestjs/axios';
 
 describe('AppController', () => {
   let app: TestingModule;
@@ -18,7 +18,7 @@ describe('AppController', () => {
   describe('getSummonerName', () => {
     it('should return "Kanedach"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getSummonerName('kanedach')).toEqual({name: 'Kanedach'});
+      expect(appController.getSummonerName('kanedach')).toEqual({ name: 'Kanedach' });
     });
   });
 });

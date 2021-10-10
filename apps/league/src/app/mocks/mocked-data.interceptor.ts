@@ -1,6 +1,6 @@
-import {HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest, HttpResponse} from "@angular/common/http";
-import {Observable, of} from "rxjs";
-import {delay, mapTo, tap} from "rxjs/operators";
+import { HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { delay, mapTo, tap } from 'rxjs/operators';
 
 export interface MockResponsePerUrl {
   urlRegExp: RegExp;
@@ -16,18 +16,14 @@ export interface MockResponsePerUrl {
 }
 
 export class MockedDataInterceptor implements HttpInterceptor {
-  constructor(protected baseUrlRegExp: RegExp, private mockResponsesPerUrl: MockResponsePerUrl[]) {
-
-  }
+  constructor(protected baseUrlRegExp: RegExp, private mockResponsesPerUrl: MockResponsePerUrl[]) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (!this.baseUrlRegExp.test(req.url)) {
       return next.handle(req);
     }
 
-    const matchingResponses = this.mockResponsesPerUrl.filter(
-      (m) => m.urlRegExp.test(req.url) && (!m.method || m.method === req.method)
-    );
+    const matchingResponses = this.mockResponsesPerUrl.filter((m) => m.urlRegExp.test(req.url) && (!m.method || m.method === req.method));
     if (matchingResponses.length > 0) {
       // Just return the first matching response
       const matchingResponse = matchingResponses[0];
@@ -46,9 +42,7 @@ export class MockedDataInterceptor implements HttpInterceptor {
             new HttpResponse({
               body: matchingResponse.body || (matchingResponse.computedBody ? matchingResponse.computedBody(req) : null),
               headers: matchingResponse.headers ? matchingResponse.headers : new HttpHeaders(),
-              status:
-                matchingResponse.status ||
-                (matchingResponse.computedStatus ? matchingResponse.computedStatus(req) : 200),
+              status: matchingResponse.status || (matchingResponse.computedStatus ? matchingResponse.computedStatus(req) : 200),
               statusText: matchingResponse.statusText ? matchingResponse.statusText : 'OK',
               url: req.url,
             })
@@ -74,6 +68,6 @@ export class MockedDataInterceptor implements HttpInterceptor {
   }
 
   private getDelay(matchingResponse: MockResponsePerUrl): number {
-    return matchingResponse.delayInMilliSeconds_DO_NOT_COMMIT ? 0 : 0
+    return matchingResponse.delayInMilliSeconds_DO_NOT_COMMIT ? 0 : 0;
   }
 }

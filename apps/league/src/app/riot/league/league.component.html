@@ -3,18 +3,17 @@
     <ng-container *ngFor="let o of league">
       <div class="column" [attr.cy-test-data]="'league-component-' + o.queueType">
         <h2 class="ui header">
-          <img src="../../../assets/ranked-emblems/{{o.tier | lowercase}}.png" class="ui circular image">
+          <img src="../../../assets/ranked-emblems/{{ o.tier | lowercase }}.png" class="ui circular image" />
           <div class="content">
-            <span [attr.cy-test-data]="'league-component-' + o.queueType + '-rank'">{{o.tier}} {{o.rank}}</span>
-            <div class="sub header"><span>{{o.queueType | rift}}</span>
-              <br>
-              <span>Win: {{o.wins}} - Losses: {{o.losses}}</span></div>
+            <span [attr.cy-test-data]="'league-component-' + o.queueType + '-rank'">{{ o.tier }} {{ o.rank }}</span>
+            <div class="sub header">
+              <span>{{ o.queueType | rift }}</span>
+              <br />
+              <span>Win: {{ o.wins }} - Losses: {{ o.losses }}</span>
+            </div>
           </div>
         </h2>
       </div>
     </ng-container>
   </div>
 </ng-container>
-
-
-

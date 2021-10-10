@@ -1,10 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'rift'
+  name: 'rift',
 })
 export class RiftPipe implements PipeTransform {
-
   transform(value: string): string {
     switch (value) {
       case 'RANKED_SOLO_5x5': {
@@ -20,9 +19,8 @@ export class RiftPipe implements PipeTransform {
         break;
       }
       default: {
-        return 'Normal'
+        return 'Normal';
       }
     }
   }
-
 }

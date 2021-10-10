@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 
 import { AppService } from './app.service';
-import {HttpService} from "@nestjs/axios";
+import { HttpService } from '@nestjs/axios';
 
 describe('AppService', () => {
   let service: AppService;
@@ -9,7 +9,7 @@ describe('AppService', () => {
   beforeAll(async () => {
     const app = await Test.createTestingModule({
       providers: [AppService],
-      imports: [HttpService]
+      imports: [HttpService],
     }).compile();
 
     service = app.get<AppService>(AppService);
