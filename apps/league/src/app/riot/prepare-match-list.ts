@@ -1,10 +1,15 @@
 import {
   Champion,
   DDChampion,
-  Match, MatchInformation, MatchInformationAddedMatch,
-  MatchInformationAddedMatches, MatchInformationAddedTeam,
-  ParticipantDto, ParticipantIdentityDto, PlayerDto,
-  TeamStatsDto
+  Match,
+  MatchInformation,
+  MatchInformationAddedMatch,
+  MatchInformationAddedMatches,
+  MatchInformationAddedTeam,
+  ParticipantDto,
+  ParticipantIdentityDto,
+  PlayerDto,
+  TeamStatsDto,
 } from '@league/api-interfaces';
 
 export class PrepareMatchList {
@@ -18,27 +23,33 @@ export class PrepareMatchList {
   }
 
   public teamList(match: Match, champions: DDChampion | null): MatchInformationAddedMatch[] {
-    if(!champions || !match.matchInformation) { return []}
+    if (!champions || !match.matchInformation) {
+      return [];
+    }
     const matchInformation: MatchInformation = match.matchInformation;
-    return matchInformation.teams.map((team:TeamStatsDto):MatchInformationAddedMatch => {
+    return matchInformation.teams.map((team: TeamStatsDto): MatchInformationAddedMatch => {
       return {
         win: team.win,
         teamId: team.teamId,
-        team: matchInformation.participants.filter((participant: ParticipantDto): boolean => participant.teamId === team.teamId).map(
-          (participant: ParticipantDto): MatchInformationAddedTeam => {
-            const champion: Champion | null = champions.data?.find((champion: Champion): boolean => champion.key === `${participant.championId}`) ?? null;
-            const championImages: Champion["image"] | null = champion?.image ?? null
-            const player: PlayerDto | null = match?.matchInformation?.participantIdentities.find(
-              (participantIdentity: ParticipantIdentityDto) => participantIdentity.participantId === participant.participantId)?.player ?? null
+        team: matchInformation.participants
+          .filter((participant: ParticipantDto): boolean => participant.teamId === team.teamId)
+          .map((participant: ParticipantDto): MatchInformationAddedTeam => {
+            const champion: Champion | null =
+              champions.data?.find((champion: Champion): boolean => champion.key === `${participant.championId}`) ?? null;
+            const championImages: Champion['image'] | null = champion?.image ?? null;
+            const player: PlayerDto | null =
+              match?.matchInformation?.participantIdentities.find(
+                (participantIdentity: ParticipantIdentityDto) => participantIdentity.participantId === participant.participantId
+              )?.player ?? null;
             return {
               championId: participant.championId,
               championName: champion?.name ?? null,
               championImage: championImages,
               summonerId: player?.summonerId ?? null,
-              summonerName: player?.summonerName ?? null
-          }}
-        )
-      }
-    })
+              summonerName: player?.summonerName ?? null,
+            };
+          }),
+      };
+    });
   }
 }

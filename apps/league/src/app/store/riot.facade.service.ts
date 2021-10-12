@@ -3,14 +3,7 @@ import { IRiot } from './reducers/riot.reducer';
 import { Store } from '@ngrx/store';
 import * as riotActions from './actions/riot.actions';
 import * as riotSelectors from './selectors/riot.selectors';
-import {
-  Champion,
-  ChampionMastery,
-  LeagueEntries,
-  MatchInformationAdded,
-  MatchList,
-  Summoner
-} from '@league/api-interfaces';
+import { Champion, ChampionMastery, LeagueEntries, MatchInformationAdded, MatchList, Summoner } from '@league/api-interfaces';
 import { Observable } from 'rxjs';
 import { filterNull } from '../filter-null';
 

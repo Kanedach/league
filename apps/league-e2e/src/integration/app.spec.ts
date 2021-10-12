@@ -52,7 +52,7 @@ describe('league', () => {
   it('match list is present', () => {
     getAddInputText().type('kanedach');
     getSearchButton().click();
-    getMatchListQueueCy().contains('Summoner\'s Rift');
+    getMatchListQueueCy().contains("Summoner's Rift");
     getMatchListQueueCy().contains('Howling Abyss');
   });
 });

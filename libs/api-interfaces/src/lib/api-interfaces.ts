@@ -298,9 +298,9 @@ export interface MatchInformationAdded {
 export interface MatchInformationAddedMatches {
   gameDuration: number | null;
   queueId: number | null;
-  mapId: number| null;
-  gameMode: string |null;
-  gameType: string | null
+  mapId: number | null;
+  gameMode: string | null;
+  gameType: string | null;
   Won: boolean;
   gameCreation: number | null;
   participantId: number | null;

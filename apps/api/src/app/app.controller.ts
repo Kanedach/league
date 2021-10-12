@@ -1,9 +1,8 @@
-import { Controller, Get, Param, UseInterceptors } from '@nestjs/common';
+import {Controller, Get, Param, Redirect} from '@nestjs/common';
 import { ChampionMastery, LeagueEntries, MatchInformation, MatchList, Summoner } from '@league/api-interfaces';
 import { AppService } from './app.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { RiotInterceptor } from './riot.interceptor';
 
 @Controller()
 export class AppController {

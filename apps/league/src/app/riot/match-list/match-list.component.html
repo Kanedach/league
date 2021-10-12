@@ -9,24 +9,30 @@
         <div class="ui stackable four column grid">
           <div class="column">
             <div class="header" [attr.cy-test-data]="'matchListQueue'">
-              {{match.queueId|queue}}
-              <BR>
-              {{match.gameMode}}
+              {{ match.queueId | queue }}
+              <BR />
+              {{ match.gameMode }}
             </div>
           </div>
           <div class="column">
-            {{match.gameCreation|date: 'dd.MM.YY - HH:MM'}}
-            <br>
-            {{(match.gameDuration)/60|number: '1.0-0'}} Min
+            {{ match.gameCreation | date: 'dd.MM.YY - HH:MM' }}
+            <br />
+            {{ match.gameDuration / 60 | number: '1.0-0' }} Min
           </div>
           <div class="column">
             <ng-container *ngFor="let matchInformation of match.match">
               <div class="ui horizontal list" *ngFor="let team of matchInformation.team">
                 <div class="item">
-                  <img class="ui image" src="http://ddragon.leagueoflegends.com/cdn/{{matches.version}}/img/champion/{{team.championImage.full}}" width="40px" alt="{{team.championName}}" title="{{team.summonerName}}" />
+                  <img
+                    class="ui image"
+                    src="http://ddragon.leagueoflegends.com/cdn/{{ matches.version }}/img/champion/{{ team.championImage.full }}"
+                    width="40px"
+                    alt="{{ team.championName }}"
+                    title="{{ team.summonerName }}"
+                  />
                 </div>
               </div>
-              <br>
+              <br />
             </ng-container>
           </div>
           <div class="column"></div>

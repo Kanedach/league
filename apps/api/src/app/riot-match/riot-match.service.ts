@@ -1,13 +1,4 @@
-import {Injectable} from "@angular/core";
-import {HttpService} from "@nestjs/axios";
+import { Injectable } from '@nestjs/common';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class RiotMatchService {
-  constructor(private  httpService: HttpService) {
-  }
-
-
-
-}
+@Injectable()
+export class RiotMatchService {}

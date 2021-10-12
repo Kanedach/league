@@ -1,5 +1,5 @@
 import { PrepareMatchList } from './prepare-match-list';
-import {DDChampion} from "@league/api-interfaces";
+import { DDChampion } from '@league/api-interfaces';
 
 const prepareMatchList = new PrepareMatchList();
 const match: any = {
@@ -9349,167 +9349,167 @@ describe('Prepare Team Information', () => {
   it('should generate Team Information', () => {
     expect(prepareMatchList.teamList(match, champions)).toEqual([
       {
-        "team": [
+        team: [
           {
-            "championId": 7,
-            "championImage": {
-              "full": "Leblanc.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion2.png",
-              "w": 48,
-              "x": 144,
-              "y": 0
+            championId: 7,
+            championImage: {
+              full: 'Leblanc.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion2.png',
+              w: 48,
+              x: 144,
+              y: 0,
             },
-            "championName": "LeBlanc",
-            "summonerId": "jtQ2erYlrXogFj8AG8Iv3lEYYfMYipuv9lMPJ8KrROMo0Lqe",
-            "summonerName": "WhatIsMyNickk"
+            championName: 'LeBlanc',
+            summonerId: 'jtQ2erYlrXogFj8AG8Iv3lEYYfMYipuv9lMPJ8KrROMo0Lqe',
+            summonerName: 'WhatIsMyNickk',
           },
           {
-            "championId": 254,
-            "championImage": {
-              "full": "Vi.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion4.png",
-              "w": 48,
-              "x": 336,
-              "y": 48
+            championId: 254,
+            championImage: {
+              full: 'Vi.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion4.png',
+              w: 48,
+              x: 336,
+              y: 48,
             },
-            "championName": "Vi",
-            "summonerId": "LV4--n2uPJX72Gs6HcwuQ77lUM-urOlouOX2H8yvDr7PZXhJVoXABI8yEQ",
-            "summonerName": "SlinkeyyyTTV"
+            championName: 'Vi',
+            summonerId: 'LV4--n2uPJX72Gs6HcwuQ77lUM-urOlouOX2H8yvDr7PZXhJVoXABI8yEQ',
+            summonerName: 'SlinkeyyyTTV',
           },
           {
-            "championId": 350,
-            "championImage": {
-              "full": "Yuumi.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion4.png",
-              "w": 48,
-              "x": 432,
-              "y": 96
+            championId: 350,
+            championImage: {
+              full: 'Yuumi.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion4.png',
+              w: 48,
+              x: 432,
+              y: 96,
             },
-            "championName": "Yuumi",
-            "summonerId": "2c2b_2BaZ5niU9zF1kzTBDZNnBCcaNKE6h88WQh-BDTREysj9EDxsO6VcQ",
-            "summonerName": "G2 Yub"
+            championName: 'Yuumi',
+            summonerId: '2c2b_2BaZ5niU9zF1kzTBDZNnBCcaNKE6h88WQh-BDTREysj9EDxsO6VcQ',
+            summonerName: 'G2 Yub',
           },
           {
-            "championId": 15,
-            "championImage": {
-              "full": "Sivir.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion3.png",
-              "w": 48,
-              "x": 144,
-              "y": 96
+            championId: 15,
+            championImage: {
+              full: 'Sivir.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion3.png',
+              w: 48,
+              x: 144,
+              y: 96,
             },
-            "championName": "Sivir",
-            "summonerId": "2ceQc6DdVI1f83JdBBsUjlaWCtMLlQddbjymxHaHlaQcMXg",
-            "summonerName": "natsu900"
+            championName: 'Sivir',
+            summonerId: '2ceQc6DdVI1f83JdBBsUjlaWCtMLlQddbjymxHaHlaQcMXg',
+            summonerName: 'natsu900',
           },
           {
-            "championId": 86,
-            "championImage": {
-              "full": "Garen.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion1.png",
-              "w": 48,
-              "x": 192,
-              "y": 0
+            championId: 86,
+            championImage: {
+              full: 'Garen.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion1.png',
+              w: 48,
+              x: 192,
+              y: 0,
             },
-            "championName": "Garen",
-            "summonerId": "URrjB8vQJokqPTXorC9HiGS2TLB1DNUOJGq-5ltiNigyNyo",
-            "summonerName": "Kanedach"
-          }
+            championName: 'Garen',
+            summonerId: 'URrjB8vQJokqPTXorC9HiGS2TLB1DNUOJGq-5ltiNigyNyo',
+            summonerName: 'Kanedach',
+          },
         ],
-        "teamId": 100,
-        "win": "Win"
+        teamId: 100,
+        win: 'Win',
       },
       {
-        "team": [
+        team: [
           {
-            "championId": 67,
-            "championImage": {
-              "full": "Vayne.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion4.png",
-              "w": 48,
-              "x": 192,
-              "y": 48
+            championId: 67,
+            championImage: {
+              full: 'Vayne.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion4.png',
+              w: 48,
+              x: 192,
+              y: 48,
             },
-            "championName": "Vayne",
-            "summonerId": "EPzCE6BWlp37yjLglVJFQfj9jIGJdOV7L1x5wyZ-1P5EgEI",
-            "summonerName": "Daekai"
+            championName: 'Vayne',
+            summonerId: 'EPzCE6BWlp37yjLglVJFQfj9jIGJdOV7L1x5wyZ-1P5EgEI',
+            summonerName: 'Daekai',
           },
           {
-            "championId": 25,
-            "championImage": {
-              "full": "Morgana.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion2.png",
-              "w": 48,
-              "x": 384,
-              "y": 48
+            championId: 25,
+            championImage: {
+              full: 'Morgana.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion2.png',
+              w: 48,
+              x: 384,
+              y: 48,
             },
-            "championName": "Morgana",
-            "summonerId": "pyDhk9uEnqWpE0I2nYvcDMJNiNyl4lYIN_U-Wk4EG0fy9kXdO1PvTKNT5Q",
-            "summonerName": "HIROKI VAIDHÈ"
+            championName: 'Morgana',
+            summonerId: 'pyDhk9uEnqWpE0I2nYvcDMJNiNyl4lYIN_U-Wk4EG0fy9kXdO1PvTKNT5Q',
+            summonerName: 'HIROKI VAIDHÈ',
           },
           {
-            "championId": 32,
-            "championImage": {
-              "full": "Amumu.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion0.png",
-              "w": 48,
-              "x": 240,
-              "y": 0
+            championId: 32,
+            championImage: {
+              full: 'Amumu.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion0.png',
+              w: 48,
+              x: 240,
+              y: 0,
             },
-            "championName": "Amumu",
-            "summonerId": "7xlzxHdH2JA4HwYl8jkjwMthljJKogwrRn_fscqdmTRd5NxGqCSdhz93Og",
-            "summonerName": "Indiantroll"
+            championName: 'Amumu',
+            summonerId: '7xlzxHdH2JA4HwYl8jkjwMthljJKogwrRn_fscqdmTRd5NxGqCSdhz93Og',
+            summonerName: 'Indiantroll',
           },
           {
-            "championId": 245,
-            "championImage": {
-              "full": "Ekko.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion0.png",
-              "w": 48,
-              "x": 240,
-              "y": 96
+            championId: 245,
+            championImage: {
+              full: 'Ekko.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion0.png',
+              w: 48,
+              x: 240,
+              y: 96,
             },
-            "championName": "Ekko",
-            "summonerId": "eBI37PedB44TU26Da7FIhRGtYDT6yUwJKltHK9KYRgLxLfmF",
-            "summonerName": "RSS Zhukov"
+            championName: 'Ekko',
+            summonerId: 'eBI37PedB44TU26Da7FIhRGtYDT6yUwJKltHK9KYRgLxLfmF',
+            summonerName: 'RSS Zhukov',
           },
           {
-            "championId": 875,
-            "championImage": {
-              "full": "Sett.png",
-              "group": "champion",
-              "h": 48,
-              "sprite": "champion3.png",
-              "w": 48,
-              "x": 336,
-              "y": 48
+            championId: 875,
+            championImage: {
+              full: 'Sett.png',
+              group: 'champion',
+              h: 48,
+              sprite: 'champion3.png',
+              w: 48,
+              x: 336,
+              y: 48,
             },
-            "championName": "Sett",
-            "summonerId": "TI5tTG5775nff2sZQrMZaNaYjPMUR7iw5RaGI1GOVHAIBvyXQ2a8EvOtEQ",
-            "summonerName": "D00MFlST"
-          }
+            championName: 'Sett',
+            summonerId: 'TI5tTG5775nff2sZQrMZaNaYjPMUR7iw5RaGI1GOVHAIBvyXQ2a8EvOtEQ',
+            summonerName: 'D00MFlST',
+          },
         ],
-        "teamId": 200,
-        "win": "Fail"
-      }
+        teamId: 200,
+        win: 'Fail',
+      },
     ]);
   });
 });

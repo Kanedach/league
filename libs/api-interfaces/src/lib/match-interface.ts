@@ -1,3 +1,1 @@
-export interface matches {
-
-}
+export interface matches {}
